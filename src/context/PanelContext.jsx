@@ -1,7 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-export const PanelContext = createContext()
-export const UsePanel = () => useContext(PanelContext)
+const PanelContext = createContext()
 
 export const PanelProvider = ( {children} ) => {
     const [deploy, setDeploy] = useState(false)
@@ -10,16 +9,19 @@ export const PanelProvider = ( {children} ) => {
         setDeploy(!deploy)
     }
 
-    const values = () => {
-        togglePanel
+    const values = {
+        deploy,
+        togglePanel,
     }
 
 return (
-    <PanelContext.Provider values={values}> 
+    <PanelContext.Provider value={values}> 
     {children}
     </PanelContext.Provider>
-)
-}
+)}
+
+export const usePanel = () => useContext(PanelContext)
+
 
 
 
