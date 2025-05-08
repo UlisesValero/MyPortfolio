@@ -3,7 +3,7 @@ import './App.css';
 import Hero from './components/pages/Hero';
 import WelcomeSection from './components/pages/WelcomeSection';
 // import ContactSection from './components/pages/ContactSection';
-import ExperienceCards from './components/ui/ExperienceCards'
+import ExperienceSection from './components/pages/ExperienceSection';
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
             <Hero />
             <WelcomeSection />
             {/* <ContactSection /> */}
-            <ExperienceCards/>
+            <ExperienceSection/>
         </section>
     );
 }

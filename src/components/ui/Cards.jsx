@@ -1,8 +1,11 @@
-const Cards = ({ name, description, status }) => {
+const Cards = ({ image,name, description, status }) => {
     return (
-      <section className="flex flex-col bg-white shadow-md rounded-lg p-4">
+      <section className="flex flex-col bg-lgray dark:bg-ddgray dark:text-white shadow-md rounded-lg p-4">
+        <div className="mb-5 flex justify-center ">
+          {image}
+          </div>
         <div className="font-bold">{name}</div>
-        <div className="text-sm text-gray-600">{description}</div>
+        <div className="text-sm dark:text-lgray">{description}</div>
         <div className="text-xs text-green-500">{status}</div>
       </section>
     );

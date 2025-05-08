@@ -1,10 +1,17 @@
 import { Reorder } from "framer-motion";
-import { useState } from "react";
-import { Experience } from "../../lib/Experience";
+import { useState, useEffect } from "react";
+import { translations } from "../../lib/translations";
+import { useLanguage } from "../../context/LanguageContext";
 import Cards from "./Cards";
 
+
 const ExperienceCards = () => {
-  const [card, setCard] = useState(Experience);
+  const { language } = useLanguage()
+  const [card, setCard] = useState(translations.en.experienceSection);
+
+  useEffect(() => {
+    setCard(translations[language].experienceSection)
+  }, [language])
 
   return (
     <Reorder.Group
@@ -19,6 +26,7 @@ const ExperienceCards = () => {
           className=""
         >
           <Cards
+            image={<img className=" rounded-xl select-none pointer-events-none " src={item.image}/>}
             name={item.name}
             description={item.description}
             status={item.status}

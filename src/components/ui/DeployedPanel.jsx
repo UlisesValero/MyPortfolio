@@ -1,4 +1,3 @@
-import "../../App.css"
 import { PanelLeftClose } from 'lucide-react'
 import { usePanel } from '../../context/PanelContext'
 

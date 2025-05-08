@@ -2,13 +2,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+    --color-lgray: #A7CCED;
+    --color-gray: #7A9CB8;
     --color-dgray: #545E75;
     --color-ddgray: #1e2939;
     --color-lblue: #63ADF2;
     --color-llblue: #2ac1ef;
-    --color-lgray: #A7CCED;
     --color-dblue: #304D6D;
-    --color-gray: #7A9CB8;
     --font-h1: "Bebas Neue", sans-serif;
     --font-h3: "Merriweather", serif;
     --font-p: "Source Serif 4", serif;
