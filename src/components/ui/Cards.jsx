@@ -1,7 +1,7 @@
 const Cards = ({ image,name, description, status }) => {
     return (
       <section className="flex flex-col bg-lgray dark:bg-ddgray dark:text-white shadow-md rounded-lg p-4">
-        <div className="mb-5 flex justify-center ">
+        <div className="mb-5 rounded-full h-52 flex justify-center ">
           {image}
           </div>
         <div className="font-bold">{name}</div>

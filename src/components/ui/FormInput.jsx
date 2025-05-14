@@ -9,7 +9,7 @@ const FormInput = () => {
                   id="name1"
                   placeholder=" "
                   required
-                  className="peer w-full border border-dgray dark:bg-ddgray text-white rounded px-3 pt-7 pb-2 focus:outline-none focus:border-lblue"
+                  className="peer w-full border border-dgray dark:bg-ddgray text-white text-sm rounded px-3 pt-7 pb-2 focus:outline-none focus:border-lblue"
                 />
                 <label
                   htmlFor="name"
@@ -27,7 +27,7 @@ const FormInput = () => {
                   id="name2"
                   placeholder=" "
                   required
-                  className="peer w-full border border-dgray bg-gray dark:bg-ddgray text-white rounded px-3 pt-7 pb-2 focus:outline-none focus:border-lblue"
+                  className="peer w-full border border-dgray bg-gray dark:bg-ddgray text-white text-sm rounded px-3 pt-7 pb-2 focus:outline-none focus:border-lblue"
                 />
                 <label
                   htmlFor="email"
@@ -45,7 +45,7 @@ const FormInput = () => {
                   id="name3"
                   placeholder=" "
                   required
-                  className="peer w-full border border-dgray dark:bg-ddgray text-white rounded px-3 pt-7 pb-2 focus:outline-none focus:border-lblue"
+                  className="peer w-full border border-dgray dark:bg-ddgray text-white text-sm rounded px-3 pt-7 pb-2 focus:outline-none focus:border-lblue"
                 />
                 <label
                   htmlFor="phone"
@@ -64,3 +64,4 @@ const FormInput = () => {
 }
 
 export default FormInput
+

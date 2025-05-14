@@ -5,7 +5,7 @@ const DeployedPanel = () => {
     const { togglePanel } = usePanel()
     return (
         <section 
-        className="h-full top-0 left-0 absolute w-[65vw] flex flex-col justify-center font-h1 text-xl
+        className="h-[100dvh] top-0 left-0 fixed w-[65vw] flex flex-col justify-center font-h1 text-xl
         text-black gap-4 px-1 z-50 
         dark:bg-[linear-gradient(to_top_right,#A7CCED,#86b8c3,#545E75)]
         bg-[linear-gradient(to_top_right,#545E75,#A7CCED,#86b8c3)]">

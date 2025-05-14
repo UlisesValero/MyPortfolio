@@ -23,10 +23,9 @@ const ExperienceCards = () => {
         <Reorder.Item
           key={item.id}
           value={item}
-          className=""
         >
           <Cards
-            image={<img className=" rounded-xl select-none pointer-events-none " src={item.image}/>}
+            image={<img className="rounded-2xl max-w-[290px]  md:object-cover select-none pointer-events-none " src={item.image}/>}
             name={item.name}
             description={item.description}
             status={item.status}
