@@ -14,6 +14,11 @@ const ExperienceCards = () => {
   }, [language])
 
   return (
+    <section>
+    <div className="flex justify-center">
+      <h1 className="font-h1 text-3xl dark:text-white">{translations[language].projectTitle.projectTitle}</h1>
+    </div>
+    <div>
     <Reorder.Group
       values={card}
       onReorder={setCard}
@@ -25,7 +30,7 @@ const ExperienceCards = () => {
           value={item}
         >
           <Cards
-            image={<img className="rounded-2xl max-w-[290px]  md:object-cover select-none pointer-events-none " src={item.image}/>}
+            image={<img className="rounded-2xl max-w-[220px]  md:object-cover select-none pointer-events-none " src={item.image}/>}
             name={item.name}
             description={item.description}
             status={item.status}
@@ -33,6 +38,8 @@ const ExperienceCards = () => {
         </Reorder.Item>
       ))}
     </Reorder.Group>
+    </div>
+    </section>
   );
 };
 

@@ -1,19 +1,20 @@
-import "../../App.css"
 import FormInput from "../ui/FormInput"
+import { translations } from "../../lib/translations"
+import { useLanguage } from "../../context/LanguageContext"
 
 const ContactSection = () => {
+    const {language} = useLanguage()
+
     return (
-        <section className="flex flex-col md:flex-row">
-            <div className="flex flex-col justify-center items-center">
-            <div className="md:w-1/2">
+        <section className="flex justify-center md:flex-row mt-25">
+            <div className="bg-lgray dark:bg-ddgray md:w-1/2 flex flex-col gap-6 rounded-r-3xl">
             <div>
-                <h1>Trabaja conmigo</h1>
+                <h1 className="font-h1 text-3xl dark:text-white text-center py-3">{translations[language].contactSection.title}</h1>
             </div>
-            <div className="flex items-center">
+            <div className="px-3">
                 <form action="submit">
                     <FormInput/>
               </form>
-            </div>
             </div>
             <div className="md:w-1/2">
                 CURRICULUM

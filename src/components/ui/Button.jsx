@@ -1,7 +1,8 @@
 
 const Button = ({text}) => {
     return (
-        <button className="font-p cursor-pointer relative inline-block px-3 py-2 font-semibold tracking-wide bg-gradient-to-r from-[#2ac1ef] to-[#1fa6d4] rounded-xl shadow-lg ring-1 ring-white/20 hover:shadow-xl hover:brightness-110 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2ac1ef] mt-4">
+        <button className="bg-llblue dark:bg-dgray dark:text-white font-bold py-3 px-6 rounded-2xl shadow-lg transition-all duration-300 ease-in-out
+                  hover:scale-105 hover:shadow-xl active:scale-95 focus:outline-none focus:ring-4 focus:ring-ddgray/50 dark:focus:ring-lgray w-full">
             {text}    
     </button>
     )

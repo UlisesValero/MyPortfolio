@@ -6,8 +6,8 @@ import LanguageSwitch from "../../hooks/LanguageSwitch"
 
 const Hero = () => {
     return (
-<header className="h-[10vh] flex justify-center">
-  <section className="bg-black/30 w-full flex justify-center items-center gap-5">
+<header className="flex justify-center">
+  <section className="bg-lgray/60 dark:bg-black/30 w-full flex justify-center items-center gap-7 fixed z-50">
     <LanguageSwitch />
     <PanelIcon />
     <ThemeSwitch />
