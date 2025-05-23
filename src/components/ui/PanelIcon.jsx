@@ -8,7 +8,7 @@ const PanelIcon = () => {
     return (
         <div className='mt-1'>
             <button onClick={togglePanel} >
-                <Menu color='white' size={28} />
+                <Menu color='white' size={28} className="md:hidden"  />
             </button>
             {deploy && (
                 <>

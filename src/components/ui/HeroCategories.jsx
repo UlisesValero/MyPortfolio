@@ -1,0 +1,17 @@
+import { translations } from '../../lib/translations'
+import { useLanguage } from '../../context/LanguageContext'
+
+const HeroCategories = () => {
+    const { language } = useLanguage()
+    const categories = translations[language]?.heroCategories
+
+    return (
+        <div className='md:flex md:flex-row md:gap-5 md:dark:text-white font-h1 md:text-2xl lg:text-3xl ' >
+            {Object.entries(categories).map(([key, label]) => (
+                <div className='z-40' key={key}>{label}</div>
+            ))}
+        </div>
+    )
+}
+
+export default HeroCategories

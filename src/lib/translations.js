@@ -2,6 +2,12 @@ import ContactSection from "../components/pages/ContactSection";
 
 export const translations = {
     en: {
+        heroCategories: {
+            myProjects: "My projects",
+            workWithMe: "Work with me",
+            blog: "Blog",
+            stayConnected: "Stay connected"
+        },
         welcomeSection: {
             clockInfo1: "Currently",
             clockInfo2: " in Argentina",
@@ -9,6 +15,11 @@ export const translations = {
             welcome1: "Hi,",
             welcome2: "I'm",
             welcome3: "Front-end developer"
+        },
+        deployedPanel: {
+            workWithMe: "Work with me",
+            blog: "Blog",
+            stayConnected:"Stay connected"
         },
         projectTitle: {
             projectTitle: "My projects"
@@ -65,6 +76,12 @@ export const translations = {
         }
     },
     es: {
+                heroCategories: {
+            myProjects: "Mis proyectos",
+            workWithMe: "Trabaja conmigo",
+            blog: "Blog",
+            stayConnected: "Donde encontrarme"
+        },
         welcomeSection: {
             clockInfo1: "Actualmente",
             clockInfo2: "hs  en Argentina",
@@ -72,6 +89,11 @@ export const translations = {
             welcome1: "Hola,",
             welcome2: "Soy",
             welcome3: "Desarrollador front-end"
+        },
+                deployedPanel: {
+            workWithMe: "Trabaja conmigo",
+            blog: "Blog",
+            stayConnected:"Donde encontrarme"
         },
         projectTitle: {
             projectTitle: "Mis proyectos"

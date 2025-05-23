@@ -1,28 +1,36 @@
-import { PanelLeftClose } from 'lucide-react'
+import { SquareX } from 'lucide-react'
 import { usePanel } from '../../context/PanelContext'
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../lib/translations'
+import Button from './Button'
 
 const DeployedPanel = () => {
-    const { togglePanel } = usePanel()
+    const { isAnimating, togglePanelTimed } = usePanel()
+    const { language } = useLanguage()
+
     return (
-        <section 
-        className="h-[100dvh] top-0 left-0 fixed w-[65vw] flex flex-col justify-center font-h1 text-xl
-        text-black gap-4 px-1 z-50 
-        dark:bg-[linear-gradient(to_top_right,#A7CCED,#86b8c3,#545E75)]
-        bg-[linear-gradient(to_top_right,#545E75,#A7CCED,#86b8c3)]">
-            <button onClick={togglePanel} className="absolute top-1 right-1">
-            <PanelLeftClose size={30}/>
+<section 
+  className="w-70 h-100 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 
+  bg-lgray dark:bg-ddgray dark:text-white font-h1 text-xl rounded-r-3xl">
+    <div className='flex flex-col items-center justify-center gap-5 h-full'>
+            <button onClick={togglePanelTimed} 
+  className={`transition-transform duration-300 ease-in-out
+    ${isAnimating ? 'rotate-90 scale-75 opacity-50' : 'rotate-0 scale-100 opacity-100'}
+    absolute top-1 right-1 hover:bg-red-500 p-2 rounded-full`}>
+            <SquareX size={30}/>
             </button>
             <div>
-                Trabaja conmigo
+            {translations[language].projectTitle.projectTitle}
             </div>
             <div>
-                Mis trabajos
+            {translations[language].deployedPanel.workWithMe}
             </div>
             <div>
                 Blog
             </div>
-            <div>
-                Mis redes
+            <button className='absolute bottom-4'>
+            <Button text={translations[language].deployedPanel.stayConnected}/>             
+            </button>
             </div>
         </section>
     )
