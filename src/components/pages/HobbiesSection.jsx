@@ -7,9 +7,9 @@ const HobbiesSection = () => {
     const { language } = useLanguage()
     return (
         <div className="flex justify-center mt-30 ">
-        <section className="lg:relative mb-50 h-fit lg:w-[90%] justify-center flex flex-row overflow-hidden ">
+        <section className="lg:relative mb-50 h-fit md:w-[90%] justify-center flex flex-row overflow-hidden ">
             <motion.div
-                className="lg:absolute lg:inset-0 lg:bg-[url(/assets/BartolomeSpoiler.PNG)] lg:bg-center lg:bg-no-repeat lg:bg-contain lg:z-0 "
+                className="lg:absolute lg:inset-0 lg:bg-[url(/assets/BartolomeSpoiler.PNG)] md:bg-center md:bg-no-repeat md:bg-contain md:z-0 "
                 whileHover={{
                     y: -100,
                     transition: {
@@ -21,7 +21,7 @@ const HobbiesSection = () => {
             <div className="lg:hidden bg-[url(/assets/BartolomeSpoiler.PNG)] bg-cover bg-top-left w-1/3" />
 
             <motion.div
-                className="w-full flex items-center lg:w-[80dvw]  bg-lgray dark:bg-ddgray lg:h-[70%] lg:self-end z-10 hover:h-full ease-out duration-400 "
+                className="w-full flex items-center md:w-[80dvw]  bg-lgray dark:bg-ddgray md:h-[70%] md:self-end z-10 hover:h-full ease-out duration-400 "
             >
                 <div className="bg-white py-1 px-1 rounded-r-2xl lg:hidden flex-shrink-0">
                     <StepForward />

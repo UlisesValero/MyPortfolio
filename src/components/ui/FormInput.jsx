@@ -15,7 +15,7 @@ const FormInput = () => {
             id={inputs.id}
             placeholder=" "
             required
-            className="peer w-[80vw] px-3 border border-dgray dark:bg-ddgray dark:text-white text-sm 
+            className="peer w-full px-3 border border-dgray dark:bg-ddgray dark:text-white text-sm 
             rounded pt-7 pb-2 focus:outline-none focus:border-lblue"
           />
           <label
@@ -31,7 +31,7 @@ const FormInput = () => {
 
 
       <div className="">
-        <Button text={translations[language].contactSection.buttonText} />
+        <Button  text={translations[language].contactSection.buttonText} />
       </div>
     </section>
   )

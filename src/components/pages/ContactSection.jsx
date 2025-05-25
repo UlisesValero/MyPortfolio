@@ -7,7 +7,7 @@ const ContactSection = () => {
 
     return (
         <section className="flex justify-center md:flex-row mt-25">
-            <div className="bg-lgray dark:bg-ddgray md:w-1/2 flex flex-col gap-6 rounded-r-3xl">
+            <div className="bg-white dark:bg-ddgray md:w-1/2 flex flex-col gap-6 rounded-r-3xl">
             <div>
                 <h1 className="font-h1 text-3xl dark:text-white text-center py-3">{translations[language].contactSection.title}</h1>
             </div>

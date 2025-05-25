@@ -18,6 +18,5 @@ HERO
 - Escribir el nombre de las secciones tanto en ingles como en castellano DONE
 
 WELCOME SECTION
-- Reloj con horario actual de Buenos Aires
-- Botón de CONTACTO que redirija hacia su respectiva sección
-- Degradado del background para iniciar otra sección
+- Hacer que no haya overflow entre el titulo y el mapa (Ajustar tamaño del mapa y PX del titulo) DONE
+- Lograr que el botón se centre en el div del titulo con el Width ajustado DONE

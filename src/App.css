@@ -9,8 +9,14 @@
     --color-lblue: #63ADF2;
     --color-llblue: #2ac1ef;
     --color-dblue: #304D6D;
+    --color-bgD: #050f1b;
+    --color-bgL: #596c90;
+    --breakpoint-xmd: 1200px;
     --font-h1: "Bebas Neue", sans-serif;
     --font-h3: "Merriweather", serif;
     --font-p: "Source Serif 4", serif;
 }
 
+.bg-theme {
+  @apply bg-[url('/assets/lightModeBg_2k.png')] h-[1440px] bg-cover transition-all duration-300 dark:bg-[url('/assets/darkModeBg_2k.png')];
+}
