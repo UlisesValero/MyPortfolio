@@ -20,3 +20,8 @@ HERO
 WELCOME SECTION
 - Hacer que no haya overflow entre el titulo y el mapa (Ajustar tamaño del mapa y PX del titulo) DONE
 - Lograr que el botón se centre en el div del titulo con el Width ajustado DONE
+
+EXPERIENCE SECTION & CONTACTSECTION
+- Darle una mejor forma al carousel, buscar inspiración
+- Hacer que la seccion de Work with me tenga el curriculum del lado derecho del form.
+- Agregar como PDF el curriculum actualizado

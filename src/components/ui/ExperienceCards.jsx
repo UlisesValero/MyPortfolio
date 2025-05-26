@@ -1,22 +1,21 @@
-// import { Reorder } from "framer-motion";
-// import { useState, useEffect } from "react";
-// import { translations } from "../../lib/translations";
-// import { useLanguage } from "../../context/LanguageContext";
-// import Cards from "./Cards";
-// import { Carousel } from "@material-tailwind/react";
+import { Reorder } from "framer-motion";
+import { useState, useEffect } from "react";
+import { translations } from "../../lib/translations";
+import { useLanguage } from "../../context/LanguageContext";
+import Cards from "./Cards";
 
 
-// const ExperienceCards = () => {
-//   const { language } = useLanguage()
-//   const [card, setCard] = useState(translations.en.experienceSection);
+const ExperienceCards = () => {
+  const { language } = useLanguage()
+  const [card, setCard] = useState(translations.en.experienceSection);
 
-//   useEffect(() => {
-//     setCard(translations[language].experienceSection)
-//   }, [language])
+  useEffect(() => {
+    setCard(translations[language].experienceSection)
+  }, [language])
 
-//   return (
+  return (
 
-//   );
-// };
+  );
+};
 
-// export default ExperienceCards;
+export default ExperienceCards;
