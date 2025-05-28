@@ -53,7 +53,7 @@ const WelcomeSection = () => {
                         <Map />
                     </div>
                 </div>
-                                    <div className="pt-30 xmd:hidden">
+                                    <div className="pt-45 xmd:hidden">
                         <Social />
                     </div>
             </section>

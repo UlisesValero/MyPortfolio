@@ -8,9 +8,9 @@ const LanguageSwitch = () => {
     <div className="flex justify-end">
       <button onClick={handleSwitch}>
         {language === "en" ? (
-          <Flag className="w-8" code="826" />
+          <Flag className="w-8 cursor-pointer" code="826" />
         ) : (
-          <Flag className="w-8" code="724" />
+          <Flag className="w-8 cursor-pointer" code="724" />
         )}
       </button>
     </div>

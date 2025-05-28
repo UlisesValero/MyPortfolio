@@ -22,6 +22,9 @@ WELCOME SECTION
 - Lograr que el botón se centre en el div del titulo con el Width ajustado DONE
 
 EXPERIENCE SECTION & CONTACTSECTION
-- Darle una mejor forma al carousel, buscar inspiración
+- Darle una mejor forma al carousel, buscar inspiración DONE
 - Hacer que la seccion de Work with me tenga el curriculum del lado derecho del form.
 - Agregar como PDF el curriculum actualizado
+- Averiguar porque las fotos tienen un height determinado si no lo configuré así DONE
+- Recortar nuevamente las imagenes en el mismo tamaño e insertarlas DONE
+- Colocar como background (Secciones a elegir) el bg de WelcomeSection invertido, haciendo el fade

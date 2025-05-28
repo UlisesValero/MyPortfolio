@@ -27,7 +27,7 @@ export const translations = {
         experienceSection: [
 
             {
-                image: "/assets/BartolomeSpoiler.PNG",
+                image: "/assets/CarouselBartolome.png",
                 name: "Bartolome Podesta",
                 description: "Landing page for Bartolomé Podestá – Medical Supplies Sales",
                 stack: "ReactJS",
@@ -35,7 +35,7 @@ export const translations = {
                 id: 1
             },
             {
-                image: "/assets/KidduSpoiler.PNG",
+                image: "/assets/CarouselKiddu.png",
                 name: "TheKidd-U",
                 description: "Website for my Smash Burgers venture",
                 stack: "ReactJS - FireBase",
@@ -43,7 +43,7 @@ export const translations = {
                 id: 2
             },
             {
-                image: "/assets/BeneganNailsSpoiler.PNG",
+                image: "/assets/CarouselNails.png",
                 name: "Benegan Nails",
                 description: "Landing page for Benegan Nails – Beauty Salon",
                 stack: "HTML5, CSS3 & JAVASCRIPT",
@@ -51,7 +51,7 @@ export const translations = {
                 id: 3
             },
             {
-                image: "/assets/CvSpoiler.PNG",
+                image: "/assets/CarouselCv.png",
                 name: "CV",
                 description: "Updated Curriculum Vitae",
                 stack: "Astro",
@@ -101,7 +101,7 @@ export const translations = {
         experienceSection: [
 
             {
-                image: "/assets/BartolomeSpoiler.PNG",
+                image: "/assets/CarouselBartolome.png",
                 name: "Bartolome Podesta",
                 description: "Landing page para Bartolomé Podestá - Venta de insumos médicos",
                 stack: "ReactJS",
@@ -109,7 +109,7 @@ export const translations = {
                 id: 1
             },
             {
-                image: "/assets/KidduSpoiler.PNG",
+                image: "/assets/CarouselKiddu.png",
                 name: "TheKidd-U",
                 description: "Sitio web para mi emprendimiento de Smash Burgers",
                 stack: "ReactJS - FireBase",
@@ -117,7 +117,7 @@ export const translations = {
                 id: 2
             },
             {
-                image: "/assets/BeneganNailsSpoiler.PNG",
+                image: "/assets/CarouselNails.png",
                 name: "Benegan Nails",
                 description: "Landing page para Benegan Nails - Salón de belleza",
                 stack: "HTML5, CSS3 & JAVASCRIPT",
@@ -125,7 +125,7 @@ export const translations = {
                 id: 3
             },
             {
-                image: "/assets/CvSpoiler.PNG",
+                image: "/assets/CarouselCv.png",
                 name: "CV",
                 description: "Curriculum Vitae actualizado",
                 stack: "Astro",

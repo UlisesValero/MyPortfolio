@@ -9,17 +9,18 @@ import FooterSection from './components/pages/FooterSection';
 
 function App() {
     return (
-        <section >  
+        <section >
             <div className='bg-theme '>
-            <Hero />
-            <WelcomeSection />
+                <Hero />
+                <WelcomeSection />
             </div>
+
             <div className='bg-bgL dark:bg-bgD'>
-            <ExperienceSection/>
-                        <ContactSection />
-                        <HobbiesSection />
-                        <FooterSection />
-                        </div>
+                <ExperienceSection />
+                <ContactSection />
+                <HobbiesSection />
+                <FooterSection />
+            </div>
         </section>
     );
 }
