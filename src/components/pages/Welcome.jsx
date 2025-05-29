@@ -4,6 +4,7 @@ import { translations } from "../../lib/translations"
 import { useLanguage } from "../../context/LanguageContext"
 import LiveClock from "../ui/LiveClock"
 import Social from "../ui/Social"
+import Blog from "../ui/Blog"
 
 const Welcome = () => {
     const { language } = useLanguage()
@@ -11,7 +12,7 @@ const Welcome = () => {
     return (
         <>
             <section className="flex flex-col xmd:flex-row px-3  text-black dark:text-white transition-all duration-300 pt-15">
-                                    <div className="absolute right-1 md:hidden w-[30%] px-1 text-xs sm:text-md">
+                                    <div className="absolute right-1 md:hidden  px-3 text-xs sm:text-md">
                         <Button text={translations[language].welcomeSection.contactButton} />
                     </div>
 
@@ -49,8 +50,7 @@ const Welcome = () => {
 
                 <div className="xmd:[40%] flex flex-col pt-30 ">
                     <div className="hidden md:flex md:flex-col md:items-center">
-                        <LiveClock />
-                        <Map />
+                        <Blog />
                     </div>
                 </div>
                                     <div className="pt-45 xmd:hidden">

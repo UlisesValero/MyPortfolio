@@ -25,7 +25,6 @@ export const translations = {
             projectTitle: "My projects"
         },
         experienceSection: [
-
             {
                 image: "/assets/CarouselBartolome.png",
                 name: "Bartolome Podesta",
@@ -57,6 +56,29 @@ export const translations = {
                 stack: "Astro",
                 status: "Online",
                 id: 4
+            }
+        ],
+        
+        cards: [
+            {
+            title: "Websites",
+            text: "Modern and responsive websites tailored to your needs",
+            icon: "AppWindow"
+            },
+            {
+            title: "Web Apps",
+            text: "Interactive web applications with powerful functionality",
+            icon: "ChevronsLeftRight"
+            },
+            {
+            title: "APIs",
+            text: "Scalable and secure APIs for seamless integration",
+            icon: "Database"
+            },
+            {
+            title: "Service level",
+            text: "High service standards to ensure satisfaction and reliability",
+            icon: "UserPen"
             }
         ],
 
@@ -131,6 +153,28 @@ export const translations = {
                 stack: "Astro",
                 status: "Activo",
                 id: 4
+            }
+        ],
+                cards: [
+            {
+            title: "Sitios web",
+            text: "Sitios web modernos y responsivos, hechos a tu medida",
+            icon: "AppWindow"
+            },
+            {
+            title: "Aplicaciones web",
+            text: "Aplicaciones web interactivas con gran funcionalidad",
+            icon: "ChevronsLeftRight"
+            },
+            {
+            title: "APIs",
+            text: "APIs escalables y seguras para una integración fluida",
+            icon: "Database"
+            },
+            {
+            title: "Nivel de servicio",
+            text: "Altos estándares de servicio para garantizar satisfacción y confiabilidad",
+            icon: "UserPen"
             }
         ],
         contactSection: {

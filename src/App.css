@@ -3,14 +3,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-lgray: #A7CCED;
+    --color-lgray: #5A91C4;
     --color-gray: #7A9CB8;
     --color-dgray: #545E75;
     --color-ddgray: #1e2939;
     --color-lblue: #63ADF2;
     --color-llblue: #2ac1ef;
     --color-dblue: #304D6D;
-    --color-bgD: #050f1b;
+    --color-salmon: #ff6467;
+    --color-white: #eee;
+    --shadow-custom: 0 0px 10px 0px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    --color-black: #2c2c2c;
+    --color-bgD: #061321;
     --color-bgL: #596c90;
     --breakpoint-xmd: 1200px;
     --font-h1: "Bebas Neue", sans-serif;
@@ -19,12 +23,12 @@
 }
 
 .bg-theme {
-  @apply bg-[url('/assets/lightModeBg_fade.png')] h-[1400px] bg-cover transition-all duration-300 dark:bg-[url('/assets/darkModeBg_fade.png')];
+  @apply bg-[url('/assets/lightModeBg_fade.png')] h-[1800px] bg-cover transition-all duration-300 dark:bg-[url('/assets/darkModeBg_fade.png')];
 }
 
-/* .inverted-bg-theme {
-  @apply bg-[url('/assets/InvertedLightModeBg.png')] h-[1440px] bg-cover transition-all duration-300 dark:bg-[url('/assets/InvertedDarkModeBg.png')]
-} */
+.inverted-bg-theme {
+  @apply bg-[url('/assets/InvertedLightModeBg.png')] h-[1400px] bg-cover transition-all duration-300 dark:bg-[url('/assets/InvertedDarkModeBg.png')]
+}
 
 
 /* bg-gradient-to-tr from-amber-100 via-lime-50 to-emerald-100 */

@@ -59,14 +59,14 @@ const Carousel = () => {
 
 <button
   onClick={prevSlide}
-  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-white/20 hover:bg-gray-400/90 dark:hover:bg-white/80 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
+  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/30 hover:bg-gray-400/90 dark:hover:bg-salmon/80 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
 >
   <div className="w-3 h-3 border-t-2 border-l-2 border-black rotate-[-45deg] " />
 </button>
 
 <button
   onClick={nextSlide}
-  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-white/20 hover:bg-gray-400/90 dark:hover:bg-white/80 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
+  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/30 hover:bg-gray-400/90 dark:hover:bg-salmon/80 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
 >
   <div className="w-3 h-3 border-t-2 border-r-2 border-black rotate-[45deg]" />
 </button>

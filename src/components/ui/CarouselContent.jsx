@@ -20,8 +20,8 @@ const CarouselContent = ({ image, name, description, status, total, current, ind
               onClick={() => setCurrent(i)}
               className={`w-3 h-3 rounded-full cursor-pointer transition-colors ${
                 i === current
-                  ? "bg-black dark:bg-white"
-                  : "bg-black/30 dark:bg-white/30"
+                  ? "bg-black dark:bg-salmon"
+                  : "bg-black/30 dark:bg-salmon/30"
               }`}
             />
           ))}

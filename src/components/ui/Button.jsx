@@ -1,9 +1,8 @@
+import { cn } from "../../lib/utils"
 
-const Button = ({ text }) => {
+const Button = ({ text, className }) => {
     return (
-        <button className="w-full bg-gradient-to-tr from-amber-100 via-lime-50 to-emerald-100
-                        dark:bg-gradient-to-tr dark:from-indigo-500 dark:via-indigo-600 dark:to-sky-500 dark:text-white font-bold py-3 px-6 rounded-2xl shadow-lg transition-all duration-300 ease-in-out
-                        hover:scale-105 hover:shadow-xl active:scale-95 focus:outline-none focus:ring-4 focus:ring-ddgray/50 dark:focus:ring-lgray">
+        <button className={cn("w-fit bg-ddgray text-white dark:shadow-salmon shadow-lgray dark:border-salmon border-lgray border shadow-custom font-bold py-3 px-6 rounded-2xl transition-all duration-300 ease-in-outhover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-lgray dark:focus:ring-salmon dark:hover:bg-salmon/70 hover:bg-lgray/70 hover:scale-105 cursor-pointer", className)}>
             {text}
         </button>
     )
