@@ -8,7 +8,7 @@ const SocialIcons = () => {
         <div
           key={icon.network}
           className='flex items-center gap-x-1 p-2 
-          dark:bg-ddgray/75 bg-dgray/40 rounded-2xl border 
+          bg-lgray/50 dark:bg-ddgray/75 rounded-2xl border 
           dark:border-white/20 border-black/20 shrink-0'
         >
           <SocialIcon network={icon.network} />

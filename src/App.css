@@ -19,5 +19,13 @@
 }
 
 .bg-theme {
-  @apply bg-[url('/assets/lightModeBg_2k.png')] h-[1440px] bg-cover transition-all duration-300 dark:bg-[url('/assets/darkModeBg_2k.png')];
+  @apply bg-[url('/assets/lightModeBg_fade.png')] h-[1400px] bg-cover transition-all duration-300 dark:bg-[url('/assets/darkModeBg_fade.png')];
 }
+
+/* .inverted-bg-theme {
+  @apply bg-[url('/assets/InvertedLightModeBg.png')] h-[1440px] bg-cover transition-all duration-300 dark:bg-[url('/assets/InvertedDarkModeBg.png')]
+} */
+
+
+/* bg-gradient-to-tr from-amber-100 via-lime-50 to-emerald-100 */
+/* dark:bg-gradient-to-tr dark:from-indigo-500 dark:via-indigo-600 dark:to-sky-500 */

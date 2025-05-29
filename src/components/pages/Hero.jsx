@@ -1,5 +1,3 @@
-import "../../App.css"
-import DeployedPanel from "../ui/DeployedPanel"
 import PanelIcon from "../ui/PanelIcon"
 import ThemeSwitch from "../../hooks/ThemeSwitch"
 import LanguageSwitch from "../../hooks/LanguageSwitch"

@@ -1,4 +1,4 @@
-import ContactSection from "../components/pages/ContactSection";
+import ContactSection from "../components/pages/Contact";
 
 export const translations = {
     en: {

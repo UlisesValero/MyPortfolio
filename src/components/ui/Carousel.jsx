@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cards from "./Cards";
+import CarouselContent from "./CarouselContent";
 import { translations } from "../../lib/translations";
 import { useLanguage } from "../../context/LanguageContext";
 import DragAndSlide from "../../hooks/DragAndSlide";
@@ -26,7 +26,7 @@ const Carousel = () => {
   } = DragAndSlide({ nextSlide, prevSlide });
 
   return (
-<div className="relative w-full max-w-3xl overflow-hidden rounded-xl shadow-lg">
+<div className="relative w-fit max-w-3xl overflow-hidden rounded-xl shadow-lg">
       <div
         ref={sliderRef}
         className="flex transition-transform duration-500 ease-in-out cursor-default"
@@ -37,7 +37,7 @@ const Carousel = () => {
       >
         {data.map((project, i) => (
           <div key={project.id} className="w-full flex-shrink-0 ">
-<Cards
+<CarouselContent
   image={
     <img
       src={project.image}

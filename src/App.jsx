@@ -1,25 +1,24 @@
 import React from 'react';
 import './App.css';
 import Hero from './components/pages/Hero';
-import WelcomeSection from './components/pages/WelcomeSection';
-import ContactSection from './components/pages/ContactSection';
-import ExperienceSection from './components/pages/ExperienceSection';
-import HobbiesSection from './components/pages/HobbiesSection';
-import FooterSection from './components/pages/FooterSection';
+import Welcome from './components/pages/Welcome';
+import Contact from './components/pages/Contact';
+import About from './components/pages/About';
+import Footer from './components/pages/Footer';
 
 function App() {
     return (
         <section >
-            <div className='bg-theme '>
+            <div className='bg-theme'>
                 <Hero />
-                <WelcomeSection />
+                <Welcome />
             </div>
 
             <div className='bg-bgL dark:bg-bgD'>
-                <ExperienceSection />
-                <ContactSection />
-                <HobbiesSection />
-                <FooterSection />
+                <About />
+                <Contact />
+                <Footer />
+
             </div>
         </section>
     );
