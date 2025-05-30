@@ -1,22 +1,42 @@
-import PanelIcon from "../ui/PanelIcon"
-import ThemeSwitch from "../../hooks/ThemeSwitch"
-import LanguageSwitch from "../../hooks/LanguageSwitch"
-import HeroCategories from "../ui/HeroCategories"
+import PanelIcon from "../ui/PanelIcon";
+import ThemeSwitch from "../../hooks/ThemeSwitch";
+import LanguageSwitch from "../../hooks/LanguageSwitch";
+import HeroCategories from "../ui/HeroCategories";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
-    return (
-<header className="flex md:justify-end">
-  <div className="bg-lgray/60 dark:bg-black/30 w-[100vw] flex justify-center md:justify-start items-center gap-7 md:gap-3 md:px-8 z-30 fixed">
-    <LanguageSwitch />
-    <PanelIcon />
-    <ThemeSwitch />
-  </div>
-  <div className="hidden md:flex md:justify-end md:items-center md:px-8 md:fixed z-30">
-    <HeroCategories />
-  </div>
-</header>
+  const [scrolled, setScrolled] = useState(false);
 
-    )
-}
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-export default Hero
+  return (
+    <header
+      className={`fixed top-0 w-full z-30 transition-all duration-300 ${
+        scrolled
+          ? "h-20 shadow-lg  backdrop-blur-md dark:bg-black/60"
+          : "h-16 bg-lgray/60 dark:bg-black/30"
+      }`}
+    >
+      <div className="flex justify-between items-center h-full px-6 md:px-12">
+        <div className="flex items-center gap-6">
+          <LanguageSwitch />
+          <ThemeSwitch />
+        </div>
+
+        <PanelIcon />
+
+        <div className="hidden md:flex">
+          <HeroCategories />
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Hero;

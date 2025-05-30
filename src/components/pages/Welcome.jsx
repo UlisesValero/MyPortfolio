@@ -18,12 +18,12 @@ const Welcome = () => {
 
                 <div className="xmd:w-[60%] xmd:px-30 sm:px-15 pt-30 ">
                     <div className="">
-                        <h1 className="font-h1 text-6xl md:text-8xl ">
+                        <h1 className="font-h1 text-6xl md:text-8xl text-gradient-theme ">
                             {translations[language].welcomeSection.welcome1}
                         </h1>
                     </div>
 
-                    <div className="flex flex-row items-center gap-4 ">
+                    <div className="flex flex-row items-center gap-4 text-gradient-theme ">
                         <h1 className="text-6xl md:text-8xl font-h1">
                             {translations[language].welcomeSection.welcome2}
                         </h1>

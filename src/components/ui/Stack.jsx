@@ -42,7 +42,7 @@ const Stack = () => {
     <DiBootstrap color="purple" />,
   ];
     return (
-    <div className="flex gap-6 text-5xl">
+    <div className="flex flex-wrap gap-6 ">
       {icons.map((Icon, index) => (
         <motion.div key={index} {...rotationProps}>
           {Icon}

@@ -9,7 +9,7 @@ import Cards from './components/pages/Cards';
 
 function App() {
     return (
-        <section >
+        <section className='h-full' >
             <div className='bg-theme'>
                 <Hero />
                 <Welcome />
@@ -19,7 +19,7 @@ function App() {
                 <Cards/>
                 <About />
             </div>
-            <div className='inverted-bg-theme'>
+            <div className='bg-theme'>
                 <Contact />
                 <Footer />
             </div>

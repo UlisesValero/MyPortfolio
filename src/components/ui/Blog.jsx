@@ -12,7 +12,7 @@ const Blog = () => {
 
     return (
 <motion.div
-      className="relative h-[50vh] max-w-sm rounded-2xl bg-gradient-to-tr from-indigo-500 to-sky-400 p-6 text-white shadow-2xl"
+      className="relative h-[50vh] max-w-sm rounded-2xl bg-gradient-to-tr from-indigo-500 to-sky-400 dark:bg-gradient-to-t dark:from-salmon dark:to-[#563F74] border-2 p-6 text-white shadow-2xl"
       whileHover={{ rotateY: 6, rotateX: -3 }}
       transition={{ type: 'spring', stiffness: 100 }}
     >

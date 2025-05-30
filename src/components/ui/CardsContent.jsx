@@ -22,7 +22,7 @@ const CardsContent = () => {
             className="w-50 px-4 py-7 md:py-8 lg:w-75 lg:py-10 shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray rounded-xl flex flex-col gap-3 bg-lgray/60 dark:bg-ddgray"
           >
             {IconComponent && <IconComponent size={50} className="flex self-center dark:text-salmon text-white" />}
-            <h1 className="text-xl font-bold text-white  pt-5">
+            <h1 className="text-xl font-bold text-gradient-theme  pt-5">
               {card.title}
             </h1>
             <p className="text-black dark:text-gray-300 text-sm">

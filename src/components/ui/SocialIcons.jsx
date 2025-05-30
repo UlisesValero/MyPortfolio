@@ -1,18 +1,22 @@
-import { SocialIcon } from 'react-social-icons'
-import { social } from '../../lib/social'
+// import { SocialIcon } from 'react-social-icons'
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+
+// import { social } from '../../lib/social'
+
+const Icons = [
+  <AiFillGithub />,
+<FaLinkedinIn />,
+<AiOutlineMail/>
+]
 
 const SocialIcons = () => {
   return (
-    <div className='flex flex-wrap gap-4 w-full max-w-full overflow-hidden'>
-      {social.map(icon => (
-        <div
-          key={icon.network}
-          className='flex items-center gap-x-1 p-2 
-          bg-lgray/50 dark:bg-ddgray/75 rounded-2xl border 
-          dark:border-white/20 border-black/20 shrink-0'
-        >
-          <SocialIcon network={icon.network} />
-          <h1 className='font-p dark:text-white whitespace-nowrap hidden sm:flex'>{icon.name}</h1>
+    <div className='flex flex-wrap gap-6 w-full max-w-full overflow-hidden'>
+      {Icons.map((icon, i) => (
+        <div className="text-3xl" key={i}>
+          {icon}
         </div>
       ))}
     </div>

@@ -26,7 +26,7 @@ const Carousel = () => {
   } = DragAndSlide({ nextSlide, prevSlide });
 
   return (
-<div className="relative w-fit max-w-3xl overflow-hidden rounded-xl shadow-lg">
+<div className="relative w-fit max-w-3xl overflow-hidden rounded-xl shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray">
       <div
         ref={sliderRef}
         className="flex transition-transform duration-500 ease-in-out cursor-default"
@@ -36,13 +36,13 @@ const Carousel = () => {
         onTouchEnd={handleTouchEnd}
       >
         {data.map((project, i) => (
-          <div key={project.id} className="w-full flex-shrink-0 ">
+          <div key={project.id} className="w-full flex-shrink-0">
 <CarouselContent
   image={
     <img
       src={project.image}
       alt={project.name}
-      className="pointer-events-none rounded-t-xl object-cover h-70 sm:h-90 md:w-200"
+      className="pointer-events-none object-cover w-160 h-90 md:rounded- md:py-5"
     />
   }
   name={project.name}
