@@ -26,7 +26,7 @@ const Carousel = () => {
   } = DragAndSlide({ nextSlide, prevSlide });
 
   return (
-<div className="relative w-fit max-w-3xl overflow-hidden rounded-xl shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray">
+<div className="relative w-full max-w-2xl overflow-hidden rounded-xl shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray">
       <div
         ref={sliderRef}
         className="flex transition-transform duration-500 ease-in-out cursor-default"
@@ -42,7 +42,7 @@ const Carousel = () => {
     <img
       src={project.image}
       alt={project.name}
-      className="pointer-events-none object-cover w-160 h-90 md:rounded- md:py-5"
+      className="pointer-events-none object-cover h-90 md:rounded"
     />
   }
   name={project.name}
@@ -59,14 +59,14 @@ const Carousel = () => {
 
 <button
   onClick={prevSlide}
-  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/30 hover:bg-gray-400/90 dark:hover:bg-salmon/80 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
+  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/70 hover:bg-gray-400/90 dark:hover:bg-salmon/50 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
 >
   <div className="w-3 h-3 border-t-2 border-l-2 border-black rotate-[-45deg] " />
 </button>
 
 <button
   onClick={nextSlide}
-  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/30 hover:bg-gray-400/90 dark:hover:bg-salmon/80 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
+  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/70 hover:bg-gray-400/90 dark:hover:bg-salmon/50 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
 >
   <div className="w-3 h-3 border-t-2 border-r-2 border-black rotate-[45deg]" />
 </button>
