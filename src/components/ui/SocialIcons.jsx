@@ -15,7 +15,7 @@ const SocialIcons = () => {
   return (
     <div className='flex flex-wrap gap-6 w-full max-w-full overflow-hidden'>
       {Icons.map((icon, i) => (
-        <div className="text-3xl" key={i}>
+        <div className="text-3xl dark:text-gray-300" key={i}>
           {icon}
         </div>
       ))}

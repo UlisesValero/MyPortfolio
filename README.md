@@ -16,6 +16,7 @@ HERO
 - Poner una luna y un sol para el switch de theme DONE
 -PC- Poner un botón con switch con sol y luna para el light/dark theme DONE
 - Escribir el nombre de las secciones tanto en ingles como en castellano DONE
+- Colocar el link de linktree en el link de stay connected
 
 WELCOME SECTION
 - Hacer que no haya overflow entre el titulo y el mapa (Ajustar tamaño del mapa y PX del titulo) DONE
@@ -31,3 +32,4 @@ Contact
 
 About
 - Hacer que una vez se clickee en el boton para redirigr el usuario a hobbies, pregunte si le gustó la pag y dejar un like.
+

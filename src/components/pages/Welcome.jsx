@@ -1,18 +1,27 @@
 import Button from "../ui/Button"
-import Map from "../ui/Map"
 import { translations } from "../../lib/translations"
 import { useLanguage } from "../../context/LanguageContext"
-import LiveClock from "../ui/LiveClock"
 import Social from "../ui/Social"
 import Blog from "../ui/Blog"
+import { useEffect, useState } from "react"
+import { motion } from 'framer-motion'
 
 const Welcome = () => {
     const { language } = useLanguage()
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 400)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <>
             <section className="flex flex-col xmd:flex-row px-3 lg:px-25 text-white transition-all duration-300 pt-15">
-                <div className="absolute right-1 md:hidden px-3 text-xs sm:text-md">
+                <div className="absolute top-20 right-1 md:hidden px-3 text-xs sm:text-md">
                     <Button text={translations[language].welcomeSection.contactButton} />
                 </div>
 
@@ -22,28 +31,38 @@ const Welcome = () => {
                             {translations[language].welcomeSection.welcome1}
                         </h1>
 
-                    <div className="flex flex-row items-center gap-4 text-gradient-theme ">
-                        <h1 className="text-7xl md:text-10xl font-h1">
-                            {translations[language].welcomeSection.welcome2}
-                        </h1>
-                        <div className="flex items-center">
-                            <img
-                                className="h-20 md:h-25 xmd:h-40 mr-0.5"
-                                src="/assets/uLogoTitle.png"
-                                alt="U Logo"
-                            />
-                            <h1 className="text-7xl md:text-10xl font-h1">lises</h1>
+                        <div className="flex flex-row items-center gap-4 text-gradient-theme ">
+                            <h1 className="text-7xl md:text-10xl font-h1">
+                                {translations[language].welcomeSection.welcome2}
+                            </h1>
+                            <div className="flex items-center">
+                                <div
+                                    className="w-20 h-25 bg-cover opacity-70 mr-0.5 bg-[url(/assets/uLogoTitle.png)] dark:bg-[url(/assets/uLogoTitleDark.png)]">
+
+                                </div>
+                                <h1 className="text-7xl md:text-10xl font-h1">lises</h1>
+                            </div>
+                        </div>
+
+                        <h3 className="font-h3 text-white dark:text-gray-300 md:text-xl font-semibold pt-2 pb-10">
+                            {translations[language].welcomeSection.welcome3}
+                        </h3>
+                        <div className="hidden md:flex w-[30%]">
+                            <Button text={translations[language].welcomeSection.contactButton} />
                         </div>
                     </div>
-
-                    <h3 className="font-h3 md:text-xl font-semibold pb-10">
-                        {translations[language].welcomeSection.welcome3}
-                    </h3>
-                    <div className="hidden md:flex w-[30%]">
-                        <Button text={translations[language].welcomeSection.contactButton} />
-                    </div>
-                                        </div>
-                    <div className="pt-6">
+                    <motion.div
+                        className="pt-6 z-50 hidden"
+                        animate={scrolled
+                            ? { position: "fixed", top: "0.25rem", left: "45%" }
+                            : { position: "relative", top: 0, left: 0 }
+                        }
+                        initial={false}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                    >
+                        <Social />
+                    </motion.div>
+                    <div className="lg:hidden pt-6 z-50">
                         <Social />
                     </div>
                 </div>

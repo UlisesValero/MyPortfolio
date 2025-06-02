@@ -19,7 +19,7 @@ const Hero = () => {
     <header
       className={`fixed top-0 w-full z-30 transition-all duration-300 ${
         scrolled
-          ? "h-20 shadow-lg  backdrop-blur-md dark:bg-black/60"
+          ? "h-20 shadow-lg  backdrop-blur-md bg-lgray/40 dark:bg-black/60"
           : "h-16 bg-lgray/60 dark:bg-black/30"
       }`}
     >

@@ -6,24 +6,36 @@ import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Footer from './components/pages/Footer';
 import Cards from './components/pages/Cards';
+import AnimationForPages from './lib/AnimationForPages';
 
 function App() {
     return (
-        <section className='h-full' >
+        <main className='h-full' >
             <div className='bg-theme'>
                 <Hero />
-                <Welcome />
+                <AnimationForPages >
+                    <Welcome />
+                </AnimationForPages>
             </div>
 
-            <div className='bg-bgL dark:bg-bgD py-100 flex flex-col gap-100'>
-                <Cards/>
-                <About />
+            <div className='bg-bgL dark:bg-bgD transition-all duration-300'>
+                <AnimationForPages >
+                    <About />
+                </AnimationForPages>
+                <AnimationForPages>
+                    <Cards />
+                </AnimationForPages>
             </div>
-            <div className='bg-theme'>
-                <Contact />
+
+            <div className='bg-theme '>
+                <AnimationForPages>
+                    <Contact />
+                </AnimationForPages>
+                {/* <div className=''>
                 <Footer />
+                </div> */}
             </div>
-        </section>
+        </main>
     );
 }
 

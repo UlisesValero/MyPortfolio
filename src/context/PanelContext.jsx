@@ -4,7 +4,7 @@ const PanelContext = createContext()
 
 export const PanelProvider = ( {children} ) => {
     const [deploy, setDeploy] = useState(false)
-    const [isAnimating, setIsAnimating] = useState(false) // NUEVO
+    const [isAnimating, setIsAnimating] = useState(false)
 
 
     const togglePanel = () => {

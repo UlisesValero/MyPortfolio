@@ -9,14 +9,14 @@ import { MotionConfig } from 'motion/react';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MotionConfig transition={{ duration: 0.4, ease: "easeOut" }}>
-    <LanguageProvider>
-    <PanelProvider>
     <ThemeProvider>
-    <App />
+      <MotionConfig transition={{ duration: 0.4, ease: "easeOut" }}>
+        <LanguageProvider>
+          <PanelProvider>
+            <App />
+          </PanelProvider>
+        </LanguageProvider>
+      </MotionConfig>
     </ThemeProvider>
-    </PanelProvider>
-    </LanguageProvider>
-    </MotionConfig>
   </StrictMode>,
 )

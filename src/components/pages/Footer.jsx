@@ -1,12 +1,15 @@
 import SocialIcons from "../ui/SocialIcons"
-
+import Map from '../ui/Map'
 
 const Footer = () => {
     return (
-        <footer className="flex justify-center items-end">
-            <section className="h-[90%] w-fit md:w-[90%] bg-ddgray">
-            <SocialIcons />
-            </section>
+        <footer className="flex justify-center items-end pb-2">
+            {/* <div>
+                <Map/>
+            </div>
+            <div>
+
+            </div> */}
         </footer>
     )
 }

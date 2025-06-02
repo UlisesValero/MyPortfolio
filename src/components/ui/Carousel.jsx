@@ -26,10 +26,10 @@ const Carousel = () => {
   } = DragAndSlide({ nextSlide, prevSlide });
 
   return (
-<div className="relative w-full max-w-2xl overflow-hidden rounded-xl shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray">
+<div className="relative h-[75vh] md:h-fit w-full max-w-2xl overflow-hidden rounded-xl shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray">
       <div
         ref={sliderRef}
-        className="flex transition-transform duration-500 ease-in-out cursor-default"
+        className="flex transition-transform duration-500 ease-in-out cursor-default h-full"
         style={{ transform: `translateX(-${current * 100}%)` }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
