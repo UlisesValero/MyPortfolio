@@ -5,10 +5,14 @@ import Social from "../ui/Social"
 import Blog from "../ui/Blog"
 import { useEffect, useState } from "react"
 import { motion } from 'framer-motion'
+import { TbHomeHand } from "react-icons/tb";
+import { useLocation, Link } from "react-router-dom"
+
 
 const Welcome = () => {
     const { language } = useLanguage()
     const [scrolled, setScrolled] = useState(false)
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,6 +21,16 @@ const Welcome = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
+    const handleHomeClick = (e) => {
+        if (location.pathname === "/") {
+            e.preventDefault();
+            const section = document.getElementById("hero");
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    };
 
     return (
         <>
@@ -47,24 +61,36 @@ const Welcome = () => {
                         <h3 className="font-h3 text-white dark:text-gray-300 md:text-xl font-semibold pt-2 pb-10">
                             {translations[language].welcomeSection.welcome3}
                         </h3>
-                        <div className="hidden md:flex w-[30%]">
+                        <Link to={"/contact"} className="hidden md:flex w-[30%]">
                             <Button text={translations[language].welcomeSection.contactButton} />
-                        </div>
+                        </Link>
                     </div>
                     <motion.div
-                        className="pt-6 z-50 hidden"
+                        className="z-50"
                         animate={scrolled
-                            ? { position: "fixed", top: "0.25rem", left: "45%" }
-                            : { position: "relative", top: 0, left: 0 }
+                            ? { visibility: "hidden"}
+                            : { display: "flex", alignItems: "top", paddingTop:"2rem" }
                         }
                         initial={false}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                         <Social />
                     </motion.div>
-                    <div className="lg:hidden pt-6 z-50">
+
+                    <motion.div
+                        className="z-50"
+                        animate={
+                            scrolled
+                                ? { bottom: "1rem", left: "2rem", opacity: 1 }
+                                : { bottom: "-5rem", left: "1rem", opacity: 0 }
+                        }
+                        initial={false}
+                        style={{ position: "fixed" }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                    >
                         <Social />
-                    </div>
+                    </motion.div>
+
                 </div>
 
                 <div className="xmd:w-[35%] flex flex-col  ">
@@ -72,6 +98,20 @@ const Welcome = () => {
                         <Blog />
                     </div>
                 </div>
+
+                {scrolled && (
+                    <motion.div
+                        className="hidden lg:flex"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0, position: "fixed", bottom: "0.70rem", left: "48%", zIndex: 50 }}
+                        exit={{ opacity: 0, y: 50 }}
+                        transition={{ duration: 0.5, ease: "easeIn" }}
+                    >
+                        <Link to={"/"} onClick={handleHomeClick}>
+                            <Button text={<TbHomeHand size={30} />} />
+                        </Link>
+                    </motion.div>
+                )}
             </section>
         </>
     )

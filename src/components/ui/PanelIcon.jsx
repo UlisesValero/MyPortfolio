@@ -16,14 +16,13 @@ const PanelIcon = () => {
                 {deploy && (
                     <>
                         <motion.div
-                            className="fixed  bg-dgray/50 dark:bg-black/50 backdrop-blur-sm z-10"
+                            className="fixed inset-0 bg-dgray/50 dark:bg-black/50 backdrop-blur-sm z-40"
                             onClick={togglePanel}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.3 }}
                         />
-
                         <DeployedPanel />
                     </>
                 )}

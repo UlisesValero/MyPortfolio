@@ -1,10 +1,21 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const PanelContext = createContext()
 
 export const PanelProvider = ( {children} ) => {
     const [deploy, setDeploy] = useState(false)
     const [isAnimating, setIsAnimating] = useState(false)
+
+    useEffect(() => {
+        if (deploy) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [deploy]);
 
 
     const togglePanel = () => {

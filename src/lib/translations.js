@@ -2,12 +2,12 @@ import ContactSection from "../components/pages/Contact";
 
 export const translations = {
     en: {
-        heroCategories: {
-            myProjects: "My projects",
-            workWithMe: "Work with me",
-            blog: "Blog",
-            stayConnected: "Stay connected"
-        },
+        heroCategories: [
+            { target: "about", category: "My projects" },
+            { target: "contact", category: "Work with me" },
+            { target: "hero", category: "Blog" },
+            { target: "https://linktr.ee/Ulisesvalero", category: "Stay Connected" }
+        ],
         welcomeSection: {
             clockInfo1: "Currently",
             clockInfo2: " in Argentina",
@@ -17,9 +17,10 @@ export const translations = {
             welcome3: "Front-end developer"
         },
         deployedPanel: {
-            workWithMe: "Work with me",
+            about: "My projects",
+            contact: "Work with me",
             blog: "Blog",
-            stayConnected:"Stay connected"
+            linktree: "Stay connected"
         },
         projectTitle: {
             projectTitle: "My projects"
@@ -58,27 +59,27 @@ export const translations = {
                 id: 4
             }
         ],
-        
+
         cards: [
             {
-            title: "Websites",
-            text: "Modern and responsive websites tailored to your needs",
-            icon: "AppWindow"
+                title: "Websites",
+                text: "Modern and responsive websites tailored to your needs",
+                icon: "AppWindow"
             },
             {
-            title: "Web Apps",
-            text: "Interactive web applications with powerful functionality",
-            icon: "ChevronsLeftRight"
+                title: "Web Apps",
+                text: "Interactive web applications with powerful functionality",
+                icon: "ChevronsLeftRight"
             },
             {
-            title: "APIs",
-            text: "Scalable and secure APIs for seamless integration",
-            icon: "Database"
+                title: "APIs",
+                text: "Scalable and secure APIs for seamless integration",
+                icon: "Database"
             },
             {
-            title: "Service level",
-            text: "High service standards to ensure satisfaction and reliability",
-            icon: "UserPen"
+                title: "Service level",
+                text: "High service standards to ensure satisfaction and reliability",
+                icon: "UserPen"
             }
         ],
 
@@ -92,18 +93,19 @@ export const translations = {
             email: "Email",
             phone: "Phone"
         },
-                blog: {
+        blog: {
             title: "Beyond the code",
             text: "In addition to my passion for web development, I have other hobbies that I enjoy and that are a big part of who I am. Like any true geek, video games play an important role in my daily life — both as a form of entertainment and a source of creative inspiration. I also enjoy playing football: I'm always ready for a match, and I'm actually pretty good at it. But if there's something that truly relaxes and entertains me, it's cooking. Even though I don’t have a formal degree, many would say I cook better than some professionals. In this section, you'll get a glimpse of my life beyond code, as I share the things I’m passionate about in my free time."
         }
     },
     es: {
-                heroCategories: {
-            myProjects: "Mis proyectos",
-            workWithMe: "Trabaja conmigo",
-            blog: "Blog",
-            stayConnected: "Donde encontrarme"
-        },
+        heroCategories: [
+            { target: "about", category: "Mis proyectos" },
+            { target: "contact", category: "Trabaja conmigo" },
+            { target: "hero", category: "Blog" },
+            { target: "https://linktr.ee/Ulisesvalero", category: "Donde encontrarme" }
+
+        ],
         welcomeSection: {
             clockInfo1: "Actualmente",
             clockInfo2: "hs  en Argentina",
@@ -112,10 +114,10 @@ export const translations = {
             welcome2: "Soy",
             welcome3: "Desarrollador front-end"
         },
-                deployedPanel: {
+        deployedPanel: {
             workWithMe: "Trabaja conmigo",
             blog: "Blog",
-            stayConnected:"Donde encontrarme"
+            stayConnected: "Donde encontrarme"
         },
         projectTitle: {
             projectTitle: "Mis proyectos"
@@ -155,26 +157,26 @@ export const translations = {
                 id: 4
             }
         ],
-                cards: [
+        cards: [
             {
-            title: "Sitios web",
-            text: "Sitios web modernos y responsivos, hechos a tu medida",
-            icon: "AppWindow"
+                title: "Sitios web",
+                text: "Sitios web modernos y responsivos, hechos a tu medida",
+                icon: "AppWindow"
             },
             {
-            title: "Aplicaciones web",
-            text: "Aplicaciones web interactivas con gran funcionalidad",
-            icon: "ChevronsLeftRight"
+                title: "Aplicaciones web",
+                text: "Aplicaciones web interactivas con gran funcionalidad",
+                icon: "ChevronsLeftRight"
             },
             {
-            title: "APIs",
-            text: "APIs escalables y seguras para una integración fluida",
-            icon: "Database"
+                title: "APIs",
+                text: "APIs escalables y seguras para una integración fluida",
+                icon: "Database"
             },
             {
-            title: "Nivel de servicio",
-            text: "Altos estándares de servicio para garantizar satisfacción y confiabilidad",
-            icon: "UserPen"
+                title: "Nivel de servicio",
+                text: "Altos estándares de servicio para garantizar satisfacción y confiabilidad",
+                icon: "UserPen"
             }
         ],
         contactSection: {

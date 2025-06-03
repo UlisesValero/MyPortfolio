@@ -13,8 +13,8 @@ const Stack = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.intersectionRatio >= 0.35),
-      { threshold: [0.35] }
+      ([entry]) => setInView(entry.intersectionRatio >= 0.15),
+      { threshold: [0.15] }
     );
 
     if (stackRef.current) observer.observe(stackRef.current);
