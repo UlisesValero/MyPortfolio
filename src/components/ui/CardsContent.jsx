@@ -25,7 +25,7 @@ const CardsContent = () => {
             <h1 className="text-xl font-bold text-gradient-theme pt-5 brightness-125">
               {card.title}
             </h1>
-            <p className="text-black dark:font-normal font-semibold dark:text-gray-300 text-sm">
+            <p className="dark:font-normal font-semibold text-gray-300 text-sm">
               {card.text}
             </p>
           </motion.div>)

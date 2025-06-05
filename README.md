@@ -28,8 +28,11 @@ Contact
 - Agregar como PDF el curriculum actualizado DONE
 - Averiguar porque las fotos tienen un height determinado si no lo configuré así DONE
 - Recortar nuevamente las imagenes en el mismo tamaño e insertarlas DONE
-- Colocar como background (Secciones a elegir) el bg de WelcomeSection invertido, haciendo el fade
+- Colocar como background (Secciones a elegir) el bg de WelcomeSection invertido, haciendo el fade DONE
+- Colocar el curriculum en ingles
 
 About
 - Hacer que una vez se clickee en el boton para redirigr el usuario a hobbies, pregunte si le gustó la pag y dejar un like.
 
+EmailJS
+- Agregar un toastify cada vez que se envia un mail

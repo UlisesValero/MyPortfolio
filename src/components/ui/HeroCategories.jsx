@@ -1,7 +1,6 @@
 import { translations } from '../../lib/translations'
 import { useLanguage } from '../../context/LanguageContext'
-import { Link } from 'react-router-dom'
-
+import { scroll } from '../../lib/utils'
 
 const HeroCategories = () => {
     const { language } = useLanguage()
@@ -23,12 +22,12 @@ const HeroCategories = () => {
                             {label.category}
                         </a>
                     ) : (
-                        <Link
-                            to={`/${label.target === 'hero' ? '' : label.target}`}
+                        <a
+                            onClick={() => scroll(label.target)}
                             className="bg-transparent border-none cursor-pointer"
                         >
                             {label.category}
-                        </Link>
+                        </a>
                     )}
                 </ul>
             ))}

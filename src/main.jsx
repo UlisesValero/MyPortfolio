@@ -6,16 +6,16 @@ import { ThemeProvider } from './context/ThemeContext.jsx'
 import { PanelProvider } from './context/PanelContext.jsx';
 import { LanguageProvider } from './context/LanguageContext.jsx';
 import { MotionConfig } from 'motion/react';
-import { createBrowserRouter } from 'react-router';
+// import { createBrowserRouter } from 'react-router';
 import { RouterProvider } from 'react-router-dom';
 import NotFoundPage from './hooks/NotFoundPage.jsx';
 
-const router = createBrowserRouter([
-  { path: "/", element: <App /> },
-  { path: "/about", element: <App /> },
-  { path: "/contact", element: <App /> },
-  { path: "*", element: <NotFoundPage /> }
-])
+// const router = createBrowserRouter([
+//   { path: "/", element: <App /> },
+//   { path: "/about", element: <App /> },
+//   { path: "/contact", element: <App /> },
+//   { path: "*", element: <NotFoundPage /> }
+// ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,7 +23,7 @@ createRoot(document.getElementById('root')).render(
       <MotionConfig transition={{ duration: 0.4, ease: "easeOut" }}>
         <LanguageProvider>
           <PanelProvider>
-            <RouterProvider router={router} />
+            <App />
           </PanelProvider>
         </LanguageProvider>
       </MotionConfig>

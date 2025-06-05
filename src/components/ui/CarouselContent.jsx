@@ -1,10 +1,10 @@
 const CarouselContent = ({ image, name, description, status, total, current, index, setCurrent }) => {
   return (
-    <section className="bg-lgray dark:bg-ddgray flex flex-col dark:text-white shadow-md h-[100%] ">
+    <section className="bg-lgray/80 dark:bg-ddgray flex flex-col dark:text-white shadow-md h-[100%] ">
       <div className="flex justify-center">{image}</div>
-      <div className="flex flex-col px-2 py-8 md:px-6 h-full">
-        <div className="font-h3 text-xl font-bold py-3">{name}</div>
-        <div className="font-p text-lg dark:text-lgray">{description}</div>
+      <div className="flex flex-col px-2 py-6 md:px-6 h-full">
+        <div className="font-h3 text-white text-xl font-bold py-3">{name}</div>
+        <div className="font-p text-lg text-gray-300/80 dark:text-lgray">{description}</div>
         <div
           className={`font-p text-sm font-bold ${
                 ['Offline', 'Inactivo'].includes(status) ? "text-red-500" : "text-green-500"
@@ -20,7 +20,7 @@ const CarouselContent = ({ image, name, description, status, total, current, ind
               onClick={() => setCurrent(i)}
               className={`w-3 h-3 rounded-full cursor-pointer transition-colors ${
                 i === current
-                  ? "bg-black dark:bg-salmon"
+                  ? "bg-white dark:bg-salmon"
                   : "bg-black/30 dark:bg-salmon/30"
               }`}
             />
