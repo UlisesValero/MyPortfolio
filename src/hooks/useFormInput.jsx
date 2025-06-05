@@ -9,7 +9,7 @@ export const useFormInput = () => {
   const contactSection = [
     {
       id: "1",
-      type: "text",
+      type: "name",
       htmlFor: "name",
       label: formLabels.name
     },
@@ -24,6 +24,12 @@ export const useFormInput = () => {
       type: "tel",
       htmlFor: "phone",
       label: formLabels.phone
+    },
+        {
+      id: "4",
+      type: "textarea",
+      htmlFor: "message",
+      label: formLabels.text
     }
   ]
 

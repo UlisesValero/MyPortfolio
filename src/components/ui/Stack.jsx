@@ -89,7 +89,7 @@ const Stack = () => {
             <motion.div className="brightness-120 hover:cursor-crosshair" whileHover={{ scale: 1.5, rotateX: -3 }}>
               {icon}
             </motion.div>
-            <h1 className="text-black dark:text-white text-xl pointer-events-none">{stackNames[index]}</h1>
+            <h1 className="text-gray-300 text-xl pointer-events-none">{stackNames[index]}</h1>
           </motion.div>
         ))}
       </div>

@@ -91,7 +91,8 @@ export const translations = {
         form: {
             name: "Name",
             email: "Email",
-            phone: "Phone"
+            phone: "Phone",
+            text: "Message"
         },
         blog: {
             title: "Beyond the code",
@@ -186,7 +187,8 @@ export const translations = {
         form: {
             name: "Nombre",
             email: "Correo electrónico",
-            phone: "Teléfono"
+            phone: "Teléfono",
+            text: "Mensaje"
         },
         blog: {
             title: "Detrás del código",
