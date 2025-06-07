@@ -13,7 +13,7 @@ const SocialIcons = ( {className} ) => {
   return (
     <div className='flex flex-wrap gap-6 w-full max-w-full overflow-hidden'>
       {Icons.map((icon, i) => (
-        <a className={cn("text-3xl dark:text-gray-300 hover:scale-110 hover:brightness-125", className)} key={i} rel="noopener noreferer" target="_blank" href={icon.target}>
+        <a className={cn("text-4xl text-gray-300 hover:scale-110 hover:brightness-125", className)} key={i} rel="noopener noreferer" target="_blank" href={icon.target}>
           {icon.icon}
         </a>
       ))}

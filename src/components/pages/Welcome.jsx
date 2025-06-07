@@ -56,35 +56,15 @@ const Welcome = ({ isFooterVisible }) => {
                     </div>
                     <motion.div
                         className="z-50"
-                        animate={scrolled 
-                            ? { visibility: "hidden" }
-                            : { display: "flex", alignItems: "top", paddingTop: "2rem" }
+                        animate={scrolled > 300 
+                            ? { opacity: 0 }
+                            : { display: "flex", alignItems: "top", paddingTop: "2rem", opacity: 1 }
                         }
                         initial={false}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                         <SocialIcons />
                     </motion.div>
-
-                    {scrolled < 700 || isFooterVisible ? null : (
-                        <motion.div
-                            className="z-50"
-
-                            animate={{
-                                bottom: "1rem",
-                                left: "2rem",
-                                opacity: 1,
-                                y: 0,
-                            }}
-                            initial={{ opacity: 0, y: 50 }}
-                            style={{ position: "fixed" }}
-                            exit={{ opacity: 0, y: 50 }}
-                            transition={{ duration: 0.5, ease: "easeIn" }}
-                        >
-                            <SocialIcons />
-                        </motion.div>
-                    )}
-
                 </div>
 
                 <div className="xmd:w-[35%] flex flex-col">
@@ -114,6 +94,24 @@ const Welcome = ({ isFooterVisible }) => {
                     </motion.div>
                 )}
             </section>
+                                {(
+                        <motion.div
+                            className="z-50 bottom-6 left-6"
+
+                            animate={
+                                scrolled < 700 || isFooterVisible ? null : {
+                                    opacity: 1,
+                                y: 0,
+                                }
+                            }
+                            initial={{ opacity: 0, y: -300,  }}
+                            style={{ position: "fixed" }}
+                            exit={{ opacity: 0, y: 300 }}
+                            transition={{ duration: 0.5, ease: "easeIn" }}
+                        >
+                            <SocialIcons />
+                        </motion.div>
+                    )}
         </>
     )
 }
