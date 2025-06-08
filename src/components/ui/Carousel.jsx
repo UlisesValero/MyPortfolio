@@ -1,80 +1,122 @@
-import { useState } from "react";
-import CarouselContent from "./CarouselContent";
-import { translations } from "../../lib/translations";
-import { useLanguage } from "../../context/LanguageContext";
-import DragAndSlide from "../../hooks/DragAndSlide";
+import { useState, useRef } from 'react'
+import { translations } from '../../lib/translations'
+import { useLanguage } from '../../context/LanguageContext'
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi"
+import { BsArrowUpRight } from "react-icons/bs"
 
 const Carousel = () => {
-  const { language } = useLanguage();
-  const data = translations[language].experienceSection;
+  const { language } = useLanguage()
+  const CarouselContent = translations[language].experience
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const [current, setCurrent] = useState(0);
+  const touchStartX = useRef(null)
+  const touchEndX = useRef(null)
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? data.length - 1 : prev - 1));
-  };
+    setCurrentIndex((prev) =>
+      prev === 0 ? CarouselContent.length - 1 : prev - 1
+    )
+  }
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-  };
+    setCurrentIndex((prev) =>
+      prev === CarouselContent.length - 1 ? 0 : prev + 1
+    )
+  }
 
-  const {
-    sliderRef,
-    handleTouchStart,
-    handleTouchMove,
-    handleTouchEnd,
-  } = DragAndSlide({ nextSlide, prevSlide });
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return
+
+    const diff = touchStartX.current - touchEndX.current
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide()
+      } else {
+        prevSlide()
+      }
+    }
+
+    touchStartX.current = null
+    touchEndX.current = null
+  }
+
+  const current = CarouselContent[currentIndex]
 
   return (
-<div className="relative h-[75vh] md:h-fit w-full max-w-2xl overflow-hidden rounded-xl shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray">
-      <div
-        ref={sliderRef}
-        className="flex transition-transform duration-500 ease-in-out cursor-default h-full"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {data.map((project, i) => (
-          <div key={project.id} className="w-full flex-shrink-0">
-<CarouselContent
-  image={
-    <img
-      src={project.image}
-      alt={project.name}
-      className="pointer-events-none object-cover h-90 md:rounded"
-    />
-  }
-  name={project.name}
-  description={project.description}
-  status={project.status}
-  total={data.length}
-  current={current}
-  index={i}
-  setCurrent={setCurrent}
-/>
+    <section
+      className="h-[65vh] flex justify-center items-center px-8"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className="lg:w-[70%] h-fit flex flex-col items-center lg:items-start justify-center lg:flex-row gap-x-5 pb-5">
+
+        <div className="w-full lg:w-1/2 px-5 pt-10 flex flex-col justify-between gap-5">
+          <div className="space-y-5 border-b border-gray-400 pb-5">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+              {current.number}
+            </h2>
+            <h3 className="text-sm sm:text-base md:text-lg text-green-400 dark:text-salmon uppercase tracking-widest font-h1">
+              {current.briefDescription}
+            </h3>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white font-h3">
+              {current.name}
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 font-p">
+              {current.description}
+            </p>
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-green-300 dark:text-salmon/80 font-mono">
+              {current.stack}
+            </h3>
           </div>
-        ))}
+
+          <a
+            href={current.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-green-400 dark:bg-salmon w-fit p-2 rounded-full hover:bg-green-300 transition"
+          >
+            <BsArrowUpRight className="text-black text-xl" />
+          </a>
+
+        </div>
+
+        <div className="lg:w-1/2 relative pt-5">
+          <img
+            src={current.image}
+            alt={current.name}
+            className="h-60 lg:h-100 rounded-xl shadow-lg"
+          />
+
+          <div className="absolute -bottom-15 right-4 gap-2 hidden md:flex">
+            <button
+              onClick={prevSlide}
+              className="p-3 cursor-crosshair bg-green-400 dark:bg-salmon text-black hover:bg-green-300 dark:hover:bg-white"
+              aria-label="Previous"
+            >
+              <FiArrowLeft />
+            </button>
+            <div
+              onClick={nextSlide}
+              className="p-3 cursor-crosshair bg-green-400 dark:bg-salmon text-black hover:bg-green-300 dark:hover:bg-white"
+              aria-label="Next"
+            >
+              <FiArrowRight />
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
+  )
+}
 
-<button
-  onClick={prevSlide}
-  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 left-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/70 hover:bg-gray-400/90 dark:hover:bg-salmon/50 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
->
-  <div className="w-3 h-3 border-t-2 border-l-2 border-black rotate-[-45deg] " />
-</button>
-
-<button
-  onClick={nextSlide}
-  className="hidden lg:flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-3 w-10 h-10 rounded-full bg-gray-300/70 dark:bg-salmon/70 hover:bg-gray-400/90 dark:hover:bg-salmon/50 hover:scale-105 transition duration-300 shadow-md cursor-pointer"
->
-  <div className="w-3 h-3 border-t-2 border-r-2 border-black rotate-[45deg]" />
-</button>
-
-
-      
-    </div>
-  );
-};
-
-export default Carousel;
+export default Carousel

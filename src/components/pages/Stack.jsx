@@ -84,12 +84,12 @@ const Stack = () => {
             key={index}
             whileHover={{ rotateY: -3, rotateX: 6 }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="flex items-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50  p-2 rounded-md shadow-sm w-full md:w-auto"
+            className="flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
           >
-            <motion.div className="brightness-120 hover:cursor-crosshair" whileHover={{ scale: 1.5, rotateX: -3 }}>
+            <motion.div className="brightness-120 hover:cursor-crosshair lg:text-5xl" whileHover={{ scale: 1.5, rotateX: -3 }}>
               {icon}
             </motion.div>
-            <h1 className="text-gray-300 text-xl pointer-events-none">{stackNames[index]}</h1>
+            <h1 className="text-gray-300 text-xl lg:text-3xl pointer-events-none">{stackNames[index]}</h1>
           </motion.div>
         ))}
       </div>

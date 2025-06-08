@@ -4,7 +4,7 @@ import Footer from "../components/pages/Footer";
 export const translations = {
     en: {
         heroCategories: [
-            { target: "about", category: "My projects" },
+            { target: "projects", category: "My projects" },
             { target: "contact", category: "Work with me" },
             { target: "hero", category: "Blog" },
             { target: "https://linktr.ee/Ulisesvalero", category: "Stay Connected" }
@@ -26,39 +26,61 @@ export const translations = {
         projectTitle: {
             projectTitle: "My projects"
         },
-        experienceSection: [
+        experience: [
             {
                 image: "/assets/CarouselBartolome.png",
+                number: "01",
+                briefDescription: "Landing page",
                 name: "Bartolome Podesta",
-                description: "Landing page for Bartolomé Podestá – Medical Supplies Sales",
-                stack: "ReactJS",
+                description: "Landing page developed for a company specializing in the sale of medical supplies. The site offers intuitive navigation through a product categorization system and includes a direct contact form to streamline communication with clients.",
+                stack: "ReactJS, Tailwind v.04, Framer-Motion",
                 status: "Online",
-                id: 1
+                id: 1,
+                link: "https://bartolome-podesta.vercel.app/"
             },
             {
                 image: "/assets/CarouselKiddu.png",
+                number: "02",
+                briefDescription: "E-Commerce",
                 name: "TheKidd-U",
-                description: "Website for my Smash Burgers venture",
-                stack: "ReactJS - FireBase",
+                description: "E-commerce project developed as part of the React course at CoderHouse. It represents a personal business idea focused on selling smash burgers. The site includes a shopping cart system and dynamic product filtering, integrated with Firebase for real-time data management.",
+                stack: "ReactJS, Tailwind v.04, FireBase",
                 status: "Online",
-                id: 2
+                id: 2,
+                link: "https://react-js-coder-entrega.vercel.app/"
             },
             {
                 image: "/assets/CarouselNails.png",
+                number: "03",
+                briefDescription: "Landing page",
                 name: "Benegan Nails",
-                description: "Landing page for Benegan Nails – Beauty Salon",
-                stack: "HTML5, CSS3 & JAVASCRIPT",
+                description: "Landing page for a beauty-focused business. The site showcases the services of a salon specializing in eyebrow design, eyelash styling, and nail art. It features a contact system to simplify appointment booking and customer communication.",
+                stack: "HTML5, CSS3 & Javascript",
                 status: "Offline",
-                id: 3
+                id: 3,
+                link: "https://ulisesvalero.github.io/Benegan-Nails/"
             },
             {
                 image: "/assets/CarouselCv.png",
-                name: "CV",
-                description: "Updated Curriculum Vitae",
+                number: "04",
+                briefDescription: "CV",
+                name: "Resume",
+                description: "An updated version of my 2025 Curriculum Vitae, featuring detailed information about my work experience, academic background, and technical skills. Designed to present my professional profile in a clear and structured format.",
                 stack: "Astro",
                 status: "Online",
-                id: 4
-            }
+                id: 4,
+                link: "https://cv-main-r6hxmmpyb-ulises-valeros-projects.vercel.app/"
+            },
+            // {
+            //     image: "",
+            //     number: "05",
+            //     name: "TEB",
+            //     description: "Updated Curriculum Vitae",
+            //     stack: "Astro",
+            //     status: "Online",
+            //     id: 4
+            // }
+
         ],
 
         cards: [
@@ -99,17 +121,17 @@ export const translations = {
             title: "Beyond the code",
             text: "In addition to my passion for web development, I have other hobbies that I enjoy and that are a big part of who I am. Like any true geek, video games play an important role in my daily life — both as a form of entertainment and a source of creative inspiration. I also enjoy playing football: I'm always ready for a match, and I'm actually pretty good at it. But if there's something that truly relaxes and entertains me, it's cooking. Even though I don’t have a formal degree, many would say I cook better than some professionals. In this section, you'll get a glimpse of my life beyond code, as I share the things I’m passionate about in my free time."
         },
-                footer: {
-                    portfolio: "My Portfolio",
-            subTitle:"Building my future, one line of code at a time",
-            linksTitle:"Quick Links",
-            rightsText:"All rights reserved.",
-            stayConnected:"Contact me"
+        footer: {
+            portfolio: "My Portfolio",
+            subTitle: "Building my future, one line of code at a time",
+            linksTitle: "Quick Links",
+            rightsText: "All rights reserved.",
+            stayConnected: "Contact me"
         }
     },
     es: {
         heroCategories: [
-            { target: "about", category: "Mis proyectos" },
+            { target: "project", category: "Mis proyectos" },
             { target: "contact", category: "Trabaja conmigo" },
             { target: "hero", category: "Blog" },
             { target: "https://linktr.ee/Ulisesvalero", category: "Donde encontrarme" }
@@ -131,39 +153,51 @@ export const translations = {
         projectTitle: {
             projectTitle: "Mis proyectos"
         },
-        experienceSection: [
+        experience: [
 
             {
                 image: "/assets/CarouselBartolome.png",
+                number: "01",
+                briefDescription: "Landing page",
                 name: "Bartolome Podesta",
-                description: "Landing page para Bartolomé Podestá - Venta de insumos médicos",
-                stack: "ReactJS",
+                description: "Landing page diseñada para una empresa dedicada a la comercialización de insumos médicos. El sitio permite una navegación intuitiva gracias a un sistema de categorización de productos y un formulario de contacto directo, facilitando la comunicación entre los clientes y la empresa.",
+                stack: "ReactJS, Tailwind v.04, Framer-Motion",
                 status: "Activo",
-                id: 1
+                id: 1,
+                link: "https://bartolome-podesta.vercel.app/"
             },
             {
                 image: "/assets/CarouselKiddu.png",
+                number: "02",
+                briefDescription: "E-Commerce",
                 name: "TheKidd-U",
-                description: "Sitio web para mi emprendimiento de Smash Burgers",
-                stack: "ReactJS - FireBase",
+                description: "E-commerce desarrollado como proyecto del curso de React en CoderHouse. Representa una propuesta de negocio personal enfocada en la venta de smash burgers. Incluye un sistema de carrito de compras y filtros dinámicos de productos, con integración a Firebase como base de datos en tiempo real.",
+                stack: "ReactJS, Tailwind v.04, FireBase",
                 status: "Activo",
-                id: 2
+                id: 2,
+                link: "https://react-js-coder-entrega.vercel.app/"
             },
             {
                 image: "/assets/CarouselNails.png",
+                number: "03",
+                briefDescription: "Landing page",
                 name: "Benegan Nails",
-                description: "Landing page para Benegan Nails - Salón de belleza",
-                stack: "HTML5, CSS3 & JAVASCRIPT",
+                description: "Landing page para un emprendimiento del rubro de la belleza. El sitio presenta los servicios de un salón especializado en el diseño de cejas, pestañas y uñas. Incorpora un sistema de contacto para facilitar la reserva de turnos y la atención al cliente.",
+                stack: "HTML5, CSS3 & Javascript",
                 status: "Inactivo",
-                id: 3
+                id: 3,
+                link: "https://ulisesvalero.github.io/Benegan-Nails/"
             },
             {
                 image: "/assets/CarouselCv.png",
-                name: "CV",
-                description: "Curriculum Vitae actualizado",
+                number: "04",
+                briefDescription: "CV",
+                name: "Curriculum",
+                description: "Versión actualizada de mi Currículum Vitae 2025, donde se detalla mi experiencia laboral, formación académica y habilidades técnicas. Es un recurso profesional pensado para mostrar mi perfil de manera clara y estructurada.",
                 stack: "Astro",
                 status: "Activo",
-                id: 4
+                id: 4,
+                link: "https://cv-main-r6hxmmpyb-ulises-valeros-projects.vercel.app/"
             }
         ],
         cards: [
@@ -204,10 +238,10 @@ export const translations = {
         },
         footer: {
             portfolio: "Mi Portfolio",
-            subTitle:"Escribiendo mi futuro, linea por linea",
-            linksTitle:"Accesos Rapidos",
-            rightsText:"Derechos reservados",
-            stayConnected:"Conectemos"
+            subTitle: "Escribiendo mi futuro, linea por linea",
+            linksTitle: "Accesos Rapidos",
+            rightsText: "Derechos reservados",
+            stayConnected: "Conectemos"
         }
 
 

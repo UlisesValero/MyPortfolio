@@ -46,10 +46,11 @@ const Welcome = ({ isFooterVisible }) => {
                                 <h1 className="text-7xl md:text-10xl font-h1">lises</h1>
                             </div>
                         </div>
-
-                        <h3 className="font-h3 text-white dark:text-gray-300 md:text-xl font-semibold pt-2 pb-10">
+                        <div className="flex items-center py-4">
+                        <h3 className="typewriter font-h3 text-white dark:text-gray-300 md:text-xl font-semibold " >
                             {translations[language].welcomeSection.welcome3}
                         </h3>
+                        </div>
                         <div onClick={() => scroll("contact")} className="hidden md:flex w-[30%]">
                             <Button text={translations[language].welcomeSection.contactButton} />
                         </div>

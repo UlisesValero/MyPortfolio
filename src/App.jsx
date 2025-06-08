@@ -3,10 +3,11 @@ import './App.css';
 import Hero from './components/pages/Hero';
 import Welcome from './components/pages/Welcome';
 import Contact from './components/pages/Contact';
-import About from './components/pages/About';
+import Projects from './components/pages/Projects';
 import Footer from './components/pages/Footer';
 import Cards from './components/pages/Cards';
 import AnimationForPages from './lib/AnimationForPages';
+import Stack from './components/pages/Stack';
 
 function App() {
     const [isFooterVisible, setIsFooterVisible] = useState(false)
@@ -27,8 +28,9 @@ function App() {
                 </AnimationForPages>
             </div>
 
-            <div id="about" className='bg-bgL dark:bg-bgD transition-all duration-300'>
-                <AnimationForPages><About /></AnimationForPages>
+            <div id="projects" className='bg-bgL dark:bg-bgD transition-all duration-300 flex flex-col gap-y-60'>
+                <AnimationForPages><Projects /></AnimationForPages>
+                <AnimationForPages><Stack /></AnimationForPages>
                 <AnimationForPages><Cards /></AnimationForPages>
             </div>
 
