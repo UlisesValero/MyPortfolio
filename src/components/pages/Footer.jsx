@@ -45,14 +45,14 @@ const Footer = ({ setIsFooterVisible }) => {
                   href={label.target}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-all duration-200"
+                  className="hover:text-white transition-all duration-200 cursor-pointer"
                 >
                   {label.category}
                 </a>
               ) : (
                 <div
                   onClick={() => scroll(label.target)}
-                  className="hover:text-white transition-all duration-200"
+                  className="hover:text-white transition-all duration-200 cursor-pointer"
                 >
                   {label.category}
                 </div>
