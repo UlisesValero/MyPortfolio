@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../lib/translations';
 import Button from './Button';
 import { motion } from 'framer-motion';
-import { scroll } from "../../lib/utils";
+import { Link } from "react-router-dom";
 
 const DeployedPanel = () => {
     const { isAnimating, togglePanelTimed } = usePanel();
@@ -32,7 +32,7 @@ const DeployedPanel = () => {
                 {Object.entries(categories).map(([key, label]) => (
                     <ul
                         onClick={togglePanelTimed}
-                    className='flex'
+                        className='flex'
                         key={key}>
                         {label.target.startsWith("http") ? (
                             <a
@@ -44,12 +44,12 @@ const DeployedPanel = () => {
                                 {label.category}
                             </a>
                         ) : (
-                            <div
-                            onClick={() => scroll(label.target)}
-                            className="bg-transparent border-none cursor-pointer"
+                            <Link
+                                to={`/${label.target === 'hero' ? '' : label.target}`}
+                                className="bg-transparent border-none cursor-pointer"
                             >
                                 {label.category}
-                            </div>
+                            </Link>
                         )}
                     </ul>
                 ))}

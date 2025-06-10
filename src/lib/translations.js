@@ -127,7 +127,71 @@ export const translations = {
             linksTitle: "Quick Links",
             rightsText: "All rights reserved.",
             stayConnected: "Contact me"
-        }
+        },
+        resume: {
+            cv: "Download Resume",
+            link: "/assets/UlisesValero-CV.pdf"
+        },
+        hobbies: [
+            {
+                image: "/assets/picada.jpeg",
+                number: "01",
+                briefDescription: "Typical argentinian *Picada*",
+                foodDesc: "Traditional Argentine cold cuts platter featuring peppered salami, cooked ham, prosciutto , homemade matambre, and Gruyère cheese. Perfect for sharing during informal gatherings or as an appetizer on special occasions.",
+                id: "1"
+            },
+            {
+                image: "/assets/asado.jpeg",
+                number: "02",
+                briefDescription: "Beef short ribs",
+                foodDesc: "Slow-cooked short ribs grilled over a rustic bed of vegetables—carrots, pumpkin, potatoes, and onions. A classic Argentine dish that blends rich flavor with cultural tradition.",
+                id: "2"
+            },
+            {
+                image: "/assets/costillar.jpeg",
+                number: "03",
+                briefDescription: "Rack of ribs",
+                foodDesc: "An 8-kilogram beef rib rack slow-cooked for 6 hours using the traditional a la cruz (cross-style) method, resulting in tender, juicy meat with an unmistakable smoky flavor.",
+                id: "3"
+            },
+            {
+                image: "/assets/pizza.jpeg",
+                number: "04",
+                briefDescription: "Grilled pizza",
+                foodDesc: "One-meter grilled pizza, split into two flavors: one half topped with bell peppers, ham, and cheese; the other with tomato, cheese, and egg. A creative twist with a flame-grilled signature.",
+                id: "4"
+            }
+        ],
+        hobbies2: [
+            {
+                image: "/assets/futbol1.jpeg",
+                number: "01",
+                briefDescription: "Peruvians vs Villurca",
+                footballDesc: "The match ended 3-3 with a last-minute goal. Great picture",
+                id: "1"
+            },
+            {
+                image: "/assets/futbol2.mp4",
+                number: "02",
+                briefDescription: "Peruvians vs Entre Rios",
+                footballDesc: "The match ended 2-1 with my team on the winning side, and i'll never forget this assist.",
+                id: "2"
+            },
+            {
+                image: "/assets/futbol3.mp4",
+                number: "03",
+                briefDescription: "Peruvians vs Vodkanguros",
+                footballDesc: "The match ended 1-1 with this brilliant play that unfortunately didn’t result in a goal",
+                id: "3"
+            },
+            {
+                image: "/assets/futbol4.mp4",
+                number: "04",
+                briefDescription: "Peruvians vs Real Barril",
+                footballDesc: "The match ended 2-1 in our favor, featuring a solo run and an incredible save by the opposing goalkeeper",
+                id: "4"
+            }
+        ]
     },
     es: {
         heroCategories: [
@@ -242,9 +306,71 @@ export const translations = {
             linksTitle: "Accesos Rapidos",
             rightsText: "Derechos reservados",
             stayConnected: "Conectemos"
-        }
-
-
+        },
+        resume: {
+            cv: "Descargar Curriculum",
+            link: "/assets/Curriculum.pdf"
+        },
+        hobbies: [
+            {
+                image: "/assets/picada.jpeg",
+                number: "01",
+                briefDescription: "Picada",
+                foodDesc: "Selección tradicional de fiambres argentinos: salame con pimienta, jamón cocido, jamón crudo, matambre casero y queso Gruyère. Ideal para compartir en reuniones informales o como entrada en una ocasión especial.",
+                id: "1"
+            },
+            {
+                image: "/assets/asado.jpeg",
+                number: "02",
+                briefDescription: "Tira de asado",
+                foodDesc: "Tira de asado cocinada a fuego lento sobre una cama de vegetales rústicos: zanahoria, calabaza, papa y cebolla. Un clásico argentino que combina sabor y tradición.",
+                id: "2"
+            },
+            {
+                image: "/assets/costillar.jpeg",
+                number: "03",
+                briefDescription: "Costillar",
+                foodDesc: "Costillar de 8 kilos cocinado durante 6 horas con el método tradicional a la cruz, logrando una carne tierna, jugosa y con un sabor ahumado inconfundible.",
+                id: "3"
+            },
+            {
+                image: "/assets/pizza.jpeg",
+                number: "04",
+                briefDescription: "Pizza a la parilla",
+                foodDesc: "Pizza de un metro cocinada a la parrilla, dividida en dos sabores: una mitad con morrón, jamón y queso; y la otra con tomate, queso y huevo. Una propuesta original con el sello del fuego.",
+                id: "4"
+            }
+        ],
+        hobbies2: [
+            {
+                image: "/assets/futbol1.jpeg",
+                number: "01",
+                briefDescription: "Peruvians vs Villurca",
+                footballDesc: "Partido finalizó 3-3 con gol a último minuto",
+                id: "1"
+            },
+            {
+                image: "/assets/futbol2.mp4",
+                number: "02",
+                briefDescription: "Peruvians vs Entre Rios",
+                footballDesc: "Partido finalizó 2-1 con mi equipo como ganador, nunca me voy a olvidar esta asistencia",
+                id: "2"
+            },
+            {
+                image: "/assets/futbol3.mp4",
+                number: "03",
+                briefDescription: "Peruvians vs Vodkanguros",
+                footballDesc: "Partido finalizó 1-1 con esta magnifica jugada que no pudo terminar en gol",
+                id: "3"
+            },
+            {
+                image: "/assets/futbol4.mp4",
+                number: "04",
+                briefDescription: "Peruvians vs Real Barril",
+                footballDesc: "Partido finalizó 2-1 a nuestro favor, jugada individual con atajadon del arquero rival",
+                id: "4"
+            }
+        ]
     }
 }
 

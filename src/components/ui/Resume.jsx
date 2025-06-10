@@ -1,12 +1,10 @@
 
 import Button from "./Button";
-import {FileDown} from 'lucide-react'
-
-
-
+import { translations } from "../../lib/translations";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Resume = () => {
-
+  const {language} = useLanguage()
 
   return (
     <section className="flex flex-col items-center gap-3  w-full">
@@ -16,11 +14,11 @@ const Resume = () => {
         title="CV Ulises Valero"
       />
       <a
-        href="/assets/Cv.PNG"
+        href={translations[language].resume.link}
         download="CV-Ulises-Valero.pdf"
         className="text-sm sm:text-lg"
       >
-        <Button text={<FileDown />} />
+        <Button text={translations[language].resume.cv} />
       </a>
     </section>
   );

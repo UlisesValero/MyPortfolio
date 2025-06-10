@@ -82,7 +82,7 @@ const Stack = () => {
         {icons.map((icon, index) => (
           <motion.div
             key={index}
-            whileHover={{ rotateY: -3, rotateX: 6 }}
+            whileHover={{ rotateY: -6, rotateX: 6 }}
             transition={{ type: "spring", stiffness: 100 }}
             className="flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
           >

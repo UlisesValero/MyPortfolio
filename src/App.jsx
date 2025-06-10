@@ -1,24 +1,29 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import Hero from './components/pages/Hero';
-import Welcome from './components/pages/Welcome';
-import Contact from './components/pages/Contact';
-import Projects from './components/pages/Projects';
-import Footer from './components/pages/Footer';
-import Cards from './components/pages/Cards';
-import AnimationForPages from './lib/AnimationForPages';
-import Stack from './components/pages/Stack';
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import Hero from './components/pages/Hero'
+import Welcome from './components/pages/Welcome'
+import Contact from './components/pages/Contact'
+import Projects from './components/pages/Projects'
+import Footer from './components/pages/Footer'
+import Cards from './components/pages/Cards'
+import AnimationForPages from './lib/AnimationForPages'
+import Stack from './components/pages/Stack'
+import './App.css'
 
 function App() {
     const [isFooterVisible, setIsFooterVisible] = useState(false)
+    const location = useLocation()
 
     useEffect(() => {
-        let sectionId = window.location.href.split('#')[1]
+        let sectionId = "hero"
+        if (location.pathname === "/projects") sectionId = "projects"
+        if (location.pathname === "/contact") sectionId = "contact"
         const section = document.getElementById(sectionId)
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' })
         }
-    })
+    }, [location.pathname])
+
     return (
         <main className='h-full' id='app'>
             <div id="hero" className='bg-theme'>
@@ -36,9 +41,7 @@ function App() {
 
             <div id="contact" className='flex flex-col justify-between bg-theme2'>
                 <AnimationForPages><Contact /></AnimationForPages>
-                <div>
-                    <Footer setIsFooterVisible={setIsFooterVisible} />
-                </div>
+                <Footer setIsFooterVisible={setIsFooterVisible} />
             </div>
         </main>
     )
