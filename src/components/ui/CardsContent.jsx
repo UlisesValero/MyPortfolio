@@ -19,10 +19,10 @@ const CardsContent = () => {
             whileHover={{ rotateY: 8, rotateX: -5 }}
             transition={{ type: 'spring', stiffness: 100 }}
             key={i}
-            className="w-50 px-4 py-7 md:py-8 lg:w-75 lg:py-10 shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray rounded-xl flex flex-col gap-3 bg-lgray/60 dark:bg-ddgray"
+            className="theme-animation w-50 px-4 py-7 md:py-8 lg:w-75 lg:py-10 shadow-custom dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray rounded-xl flex flex-col gap-3 bg-lgray/60 dark:bg-ddgray"
           >
-            {IconComponent && <IconComponent size={50} className="flex self-center dark:text-salmon text-white" />}
-            <h1 className="text-xl font-bold text-gradient-theme pt-5 brightness-125">
+            {IconComponent && <IconComponent size={50} className="flex self-center dark:text-salmon text-white theme-animation" />}
+            <h1 className="text-xl font-bold text-gradient-theme pt-5 brightness-125 theme-animation">
               {card.title}
             </h1>
             <p className="dark:font-normal font-semibold text-gray-300 text-sm">

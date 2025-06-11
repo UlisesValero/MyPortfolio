@@ -58,7 +58,7 @@ const FormInput = () => {
                 onChange={handleChange}
                 rows={6}
                 required
-                className="peer w-full border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm 
+                className="peer w-full border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm theme-animation
                            rounded pt-6 pb-2 px-3 focus:outline-none border-green-200 dark:border-white dark:focus:border-salmon"
               />
             ) : (
@@ -70,14 +70,14 @@ const FormInput = () => {
                 placeholder=" "
                 onChange={handleChange}
                 required
-                className="peer w-full border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm 
+                className="peer w-full border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm theme-animation 
                            rounded pt-7 pb-2 px-3 focus:outline-none border-green-200 dark:border-white dark:focus:border-salmon focus:border-green-400"
               />
             )}
             <label
               htmlFor={input.htmlFor}
-              className="pointer-events-none absolute left-3 top-2 text-white text-sm transition-all  
-                         peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray 
+              className="pointer-events-none absolute left-3 top-2 text-white text-sm theme-animation  
+                         peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray theme-animation
                          peer-focus:top-0 peer-focus:text-sm dark:peer-focus:text-salmon peer-focus:text-green-400 focus:border-green-400"
             >
               {input.label}
@@ -86,7 +86,7 @@ const FormInput = () => {
         ))}
         <div className="flex justify-center w-full pt-10 ">
           <Button
-            className={"w-[80%] text-green-200 hover:text-green-400 dark:text-white dark:hover:text-black"}
+            className={"w-[80%] text-green-200 hover:text-green-400 dark:text-white dark:hover:text-black theme-animation"}
             text={translations[language].contactSection.buttonText}
             disabled={pending}
           />

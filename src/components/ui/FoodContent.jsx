@@ -1,54 +1,20 @@
-import { useState, useRef } from 'react'
 import { translations } from '../../lib/translations'
 import { useLanguage } from '../../context/LanguageContext'
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi"
 import { BsArrowUpRight } from "react-icons/bs"
+import useCarousel from '../../hooks/useCarousel'
 
 const FoodContent = () => {
   const { language } = useLanguage()
   const CarouselContent = translations[language].hobbies
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const touchStartX = useRef(null)
-  const touchEndX = useRef(null)
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? CarouselContent.length - 1 : prev - 1
-    )
-  }
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === CarouselContent.length - 1 ? 0 : prev + 1
-    )
-  }
-
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX
-  }
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return
-
-    const diff = touchStartX.current - touchEndX.current
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        nextSlide()
-      } else {
-        prevSlide()
-      }
-    }
-
-    touchStartX.current = null
-    touchEndX.current = null
-  }
-
-  const current = CarouselContent[currentIndex]
+     const {
+        handleTouchEnd,
+        handleTouchMove,
+        handleTouchStart,
+        nextSlide,
+        prevSlide,
+        currentItem
+    } = useCarousel(CarouselContent)
 
   return (
     <section
@@ -62,21 +28,21 @@ const FoodContent = () => {
         <div className="w-full lg:w-1/2 px-5 pt-10 flex flex-col justify-between gap-5">
           <div className="space-y-5 border-b border-gray-400 pb-5">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
-              {current.number}
+              {currentItem.number}
             </h2>
             <h3 className="text-sm sm:text-base md:text-lg text-green-400 dark:text-salmon uppercase tracking-widest font-h1">
-              {current.briefDescription}
+              {currentItem.briefDescription}
             </h3>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white font-h3">
-              {current.name}
+              {currentItem.name}
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-gray-300 font-p">
-              {current.foodDesc}
+              {currentItem.foodDesc}
             </p>
           </div>
 
           <a
-            href={current.link}
+            href={currentItem.link}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center bg-green-400 dark:bg-salmon w-fit p-2 rounded-full hover:bg-green-300 transition"
@@ -88,8 +54,8 @@ const FoodContent = () => {
 
         <div className="lg:w-1/2 relative pt-5">
           <img
-            src={current.image}
-            alt={current.name}
+            src={currentItem.image}
+            alt={currentItem.name}
             className="w-60 lg:w-fit h-80 lg:h-100 rounded-xl shadow-lg"
           />
 

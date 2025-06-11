@@ -32,6 +32,11 @@
   @apply bg-gradient-to-t from-indigo-500 to-sky-500 dark:bg-gradient-to-t dark:from-[#9F3A51] dark:to-[#563F74] bg-clip-text text-transparent;
 }
 
+.theme-animation {
+  @apply transition-all duration-800
+}
+
+
 @keyframes typing {
   from { width: 0 }
   to { width: 13rem }

@@ -1,15 +1,11 @@
-import { FaReact, FaHtml5 } from "react-icons/fa";
-import { IoLogoJavascript, IoLogoCss3 } from "react-icons/io";
-import { SiTailwindcss } from "react-icons/si";
-import { RiFirebaseLine } from "react-icons/ri";
-import { GrMysql } from "react-icons/gr";
-import { DiBootstrap } from "react-icons/di";
+import StackContent from '../ui/StackContent';
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from "react";
 
 const Stack = () => {
   const [inView, setInView] = useState(false);
   const stackRef = useRef(null);
+  const [icons, stackNames] = StackContent()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,27 +19,7 @@ const Stack = () => {
     };
   }, []);
 
-  const icons = [
-    <FaReact className="text-blue-400" />,
-    <IoLogoJavascript color="yellow" />,
-    <FaHtml5 color="orange" />,
-    <IoLogoCss3 className="text-blue-500" />,
-    <SiTailwindcss className="text-blue-400" />,
-    <RiFirebaseLine color="orange" />,
-    <GrMysql color="gray" />,
-    <DiBootstrap color="purple" />,
-  ];
 
-  const stackNames = [
-    "ReactJS",
-    "Javascript",
-    "HTML5",
-    "CSS3",
-    "Tailwind v.4",
-    "Firebase",
-    "SQL",
-    "Bootstrap"
-  ];
 
   return (
     <div className="relative w-full flex justify-center items-center">
@@ -70,21 +46,21 @@ const Stack = () => {
             }
         }
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="font-h1 dark:text-white text-[3.5rem] sm:text-8xl md:text-5xl lg:text-7xl text-center text-gradient-theme pointer-events-none "
+        className="font-h1 dark:text-white text-[3.5rem] sm:text-8xl md:text-5xl lg:text-7xl text-center text-gradient-theme pointer-events-none theme-animation"
       >
         Stack
       </motion.h1>
 
       <div
         ref={stackRef}
-        className="relative z-10 text-5xl md:text-3xl flex flex-col flex-wrap gap-y-5 w-full md:w-[75%] lg:w-[60%] pt-25"
+        className="relative z-10 text-5xl md:text-3xl flex flex-col flex-wrap gap-y-5 w-[90%] md:w-[75%] lg:w-[20%] pt-25"
       >
         {icons.map((icon, index) => (
           <motion.div
             key={index}
             whileHover={{ rotateY: -6, rotateX: 6 }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
+            className="theme-animation flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
           >
             <motion.div className="brightness-120 hover:cursor-crosshair lg:text-5xl" whileHover={{ scale: 1.5, rotateX: -3 }}>
               {icon}

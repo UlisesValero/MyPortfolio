@@ -16,9 +16,9 @@ const Resume = () => {
       <a
         href={translations[language].resume.link}
         download="CV-Ulises-Valero.pdf"
-        className="text-sm sm:text-lg"
+        className="text-sm sm:text-lg "
       >
-        <Button text={translations[language].resume.cv} />
+        <Button className={"theme-animation"} text={translations[language].resume.cv} />
       </a>
     </section>
   );

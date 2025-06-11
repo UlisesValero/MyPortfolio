@@ -28,7 +28,7 @@ const Footer = ({ setIsFooterVisible }) => {
   }, [setIsFooterVisible]);
 
   return (
-    <footer ref={footerRef} className="bg-lgray/80 dark:bg-ddgray text-white py-5 px-6">      
+    <footer ref={footerRef} className="bg-lgray/30 dark:bg-ddgray text-white py-5 px-6">      
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 ">
       <div>
         <h2 className="text-2xl font-bold">{footerTitles.portfolio}</h2>
@@ -45,14 +45,14 @@ const Footer = ({ setIsFooterVisible }) => {
                   href={label.target}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-all duration-200 cursor-pointer"
+                  className="hover:scale-110 hover:text-green-300 hover:underline dark:hover:text-salmon transition-all duration-200 cursor-crosshair"
                 >
                   {label.category}
                 </a>
               ) : (
                 <div
                   onClick={() => scroll(label.target)}
-                  className="hover:text-white transition-all duration-200 cursor-pointer"
+                  className="hover:scale-110 hover:text-green-300 hover:underline dark:hover:text-salmon transition-all duration-200 cursor-crosshair"
                 >
                   {label.category}
                 </div>
@@ -64,11 +64,11 @@ const Footer = ({ setIsFooterVisible }) => {
 
       <div>
         <h3 className="text-lg font-semibold mb-3">{footerTitles.stayConnected}</h3>
-        <SocialIcons className="text-2xl" />
+        <SocialIcons className="text-2xl cursor-crosshair" />
       </div>
     </div>
 
-      <div className="mt-10 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+      <div className="mt-10 border-t border-gray-800 pt-6 text-center text-sm text-gray-200">
         © {new Date().getFullYear()} Ulises Valero. {footerTitles.rightsText}
       </div>
     </footer>

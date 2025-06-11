@@ -1,6 +1,6 @@
 import App from '../App.jsx'
 import Hobbies from './pages/Hobbies.jsx'
-// import NotFoundPage from './components/pages/NotFoundPage.jsx' // si tienes una página 404
+// import NotFoundPage from './components/pages/NotFoundPage.jsx'
 
 import { createBrowserRouter } from 'react-router-dom'
 

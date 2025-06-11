@@ -10,7 +10,7 @@ const ThemeSwitch = () => {
                 className="mt-1 "
                 onClick={toggleTheme}
             >
-                {darkMode ? <Moon size={28} className="cursor-pointer" color="white" /> : <Sun className="cursor-pointer" size={28} color="yellow" />}
+                {darkMode ? <Moon size={28} className="cursor-pointer theme-animation" color="white" /> : <Sun className="cursor-pointer theme-animation" size={28} color="yellow" />}
             </button>
         </div>
     );

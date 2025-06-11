@@ -12,7 +12,7 @@ const LiveClock = () => {
   }, []);
 
   return (
-    <div className="text-lg font-h1 dark:text-white w-fit transition-all duration-300">
+    <div className="text-lg font-h1 dark:text-white w-fit theme-animation">
         ⏳{translations[language].welcomeSection.clockInfo1} {time.toLocaleTimeString()}{translations[language].welcomeSection.clockInfo2}
     </div>
   );

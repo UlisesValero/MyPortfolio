@@ -9,6 +9,7 @@ import Cards from './components/pages/Cards'
 import AnimationForPages from './lib/AnimationForPages'
 import Stack from './components/pages/Stack'
 import './App.css'
+import { scroll } from './lib/utils'
 
 function App() {
     const [isFooterVisible, setIsFooterVisible] = useState(false)
@@ -18,28 +19,32 @@ function App() {
         let sectionId = "hero"
         if (location.pathname === "/projects") sectionId = "projects"
         if (location.pathname === "/contact") sectionId = "contact"
-        const section = document.getElementById(sectionId)
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' })
+        if (location.pathname === "/contact") sectionId = "contact"
+        if (location.pathname === '/') { 
+            scroll({ top: 0})
         }
-    }, [location.pathname])
+            const section = document.getElementById(sectionId)
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' })
+            }
+        }, [location.pathname])
 
     return (
         <main className='h-full' id='app'>
-            <div id="hero" className='bg-theme'>
+            <div id="hero" className='bg-theme theme-animation'>
                 <Hero />
                 <AnimationForPages>
                     <Welcome isFooterVisible={isFooterVisible} />
                 </AnimationForPages>
             </div>
 
-            <div id="projects" className='bg-bgL dark:bg-bgD transition-all duration-300 flex flex-col gap-y-60'>
+            <div id="projects" className='bg-bgL dark:bg-bgD theme-animation flex flex-col gap-y-60'>
                 <AnimationForPages><Projects /></AnimationForPages>
                 <AnimationForPages><Stack /></AnimationForPages>
                 <AnimationForPages><Cards /></AnimationForPages>
             </div>
 
-            <div id="contact" className='flex flex-col justify-between bg-theme2'>
+            <div id="contact" className='flex flex-col justify-between bg-theme2 theme-animation'>
                 <AnimationForPages><Contact /></AnimationForPages>
                 <Footer setIsFooterVisible={setIsFooterVisible} />
             </div>

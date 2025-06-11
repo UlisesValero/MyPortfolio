@@ -3,9 +3,12 @@ import { twMerge } from 'tailwind-merge'
 
 
 export const scroll = (target) => {
-  document.getElementById(`${target}`).scrollIntoView({
-    behavior: "smooth"
-  })
+  const el = document.getElementById(target)
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" })
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 }
 
 export const cn = (...inputs) => {

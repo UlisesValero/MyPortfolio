@@ -10,7 +10,7 @@ const HeroCategories = () => {
         <div className='md:flex md:flex-row md:gap-5 text-white dark:text-gray-300 font-h1 md:text-2xl lg:text-3xl'>
             {Object.entries(categories).map(([key, label]) => (
                 <ul 
-                className='hover:underline hover:brightness-125 transition-all duration-300 ease-in-out hover:scale-105'
+                className='hover:underline hover:brightness-125 theme-animation ease-in-out hover:scale-105'
                 key={key}>
                     {label.target.startsWith("http") ? (
                         <a

@@ -8,7 +8,7 @@ const Blog = () => {
 
     return (
         <motion.div
-            className="relative h-fit max-w-sm rounded-2xl bg-gradient-to-tr from-indigo-500 to-sky-400 dark:bg-gradient-to-t dark:from-salmon dark:to-[#563F74] border-2 p-6 text-white shadow-2xl"
+            className="relative h-fit max-w-sm rounded-2xl bg-gradient-to-tr from-indigo-500 to-sky-400 dark:bg-gradient-to-t dark:from-salmon dark:to-[#563F74] border-2 p-6 text-white shadow-2xl theme-animation"
             whileHover={{ rotateY: 6, rotateX: -3 }}
             transition={{ type: 'spring', stiffness: 100 }}
         >
@@ -24,7 +24,7 @@ const Blog = () => {
                 rel="noopener noreferrer"
             >
                 <Button
-                    className={"w-full font-h3 group inline-flex items-center gap-2 rounded-lg  px-4 py-2 text-sm  shadow-md transition hover:scale-105"}
+                    className={"w-full font-h3 group inline-flex justify-center gap-2 rounded-lg px-4 py-2 text-sm shadow-md transition hover:scale-105 hover:border-2 hover:border-white dark:hover:border-black dark:hover:text-black theme-animation"}
                     text={"Enter the Lab"}
                 />
             </a>
