@@ -18,7 +18,7 @@ const FootballContent = () => {
 
     return (
         <section
-            className="px-15"
+            className="px-15 select-none"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -30,17 +30,17 @@ const FootballContent = () => {
                         <video
                             src={currentItem.image}
                             controls
-                            className="h-100 lg:h-100 rounded-xl shadow-lg"
+                            className="h-100 lg:h-100 rounded-xl shadow-lg bg-transparent"
                         />
                     ) : (
                         <img
                             src={currentItem.image}
                             alt={currentItem.name}
-                            className="lg:h-100 rounded-xl shadow-lg"
+                            className="lg:h-100 rounded-xl shadow-lg bg-transparent"
                         />
                     )}
 
-                    <div className="absolute -bottom-15 right-60 lg:left-5 gap-2 hidden md:flex">
+                    <div className="absolute -bottom-15 right-60 lg:left-5 gap-2 hidden md:flex ">
                         <button
                             onClick={prevSlide}
                             className="p-3 cursor-crosshair bg-green-400 dark:bg-salmon text-black hover:bg-green-300 dark:hover:bg-white"

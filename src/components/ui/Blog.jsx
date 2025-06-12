@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { translations } from "../../lib/translations";
 import { useLanguage } from "../../context/LanguageContext";
 import Button from "./Button";
+import { Link } from "react-router";
 
 const Blog = () => {
     const { language } = useLanguage();
@@ -17,17 +18,17 @@ const Blog = () => {
                 {translations[language].blog.text}
             </p>
 
-            <a
-                className="flex pt-20 items-end"
-                href="/hobbies"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Button
-                    className={"w-full font-h3 group inline-flex justify-center gap-2 rounded-lg px-4 py-2 text-sm shadow-md transition hover:scale-105 hover:border-2 hover:border-white dark:hover:border-black dark:hover:text-black theme-animation"}
-                    text={"Enter the Lab"}
-                />
-            </a>
+<Link
+  to="/hobbies"
+  className="flex pt-20 items-end"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    className="w-full font-h3 group inline-flex justify-center gap-2 rounded-lg px-4 py-2 text-sm shadow-md transition hover:scale-105 hover:border-2 hover:border-white dark:hover:border-black dark:hover:text-black theme-animation"
+    text={"Enter the Lab"}
+  />
+</Link>
         </motion.div>
     );
 };

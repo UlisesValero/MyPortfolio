@@ -28,6 +28,10 @@
   @apply bg-[url('/assets/LightBackground.svg')] dark:bg-[url('/assets/DarkBackground.svg')] h-[1950px] bg-center md:bg-cover transition-all duration-300
 }
 
+.bg-theme3 {
+  @apply bg-[url('/assets/LightBackground.svg')] dark:bg-[url('/assets/DarkBackground.svg')] h-[100vh] bg-center md:bg-cover transition-all duration-300
+}
+
 .text-gradient-theme {
   @apply bg-gradient-to-t from-indigo-500 to-sky-500 dark:bg-gradient-to-t dark:from-[#9F3A51] dark:to-[#563F74] bg-clip-text text-transparent;
 }
@@ -61,3 +65,6 @@
   animation-direction: alternate, normal;
 }
 
+html, body, #app {
+  overflow: visible;
+}

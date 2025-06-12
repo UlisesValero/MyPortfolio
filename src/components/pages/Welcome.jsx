@@ -28,8 +28,8 @@ const Welcome = ({ isFooterVisible }) => {
 
     return (
         <>
-            <section className="flex flex-col xmd:flex-row px-3 lg:px-25 text-white theme-animation pt-15">
-                <div onClick={() => scroll("contact")} className="absolute top-20 right-1 md:hidden px-3 text-xs sm:text-md">
+            <section className="flex flex-col xmd:flex-row px-3 lg:px-25 text-white theme-animation pt-15 select-none">
+                <div onClick={() => scroll("contact")} className="absolute top-27 right-1 md:hidden px-3 text-xs sm:text-md">
                     <Button className={"theme-animation"} text={translations[language].welcomeSection.contactButton} />
                 </div>
 

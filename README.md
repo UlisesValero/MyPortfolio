@@ -1,38 +1,37 @@
-TO DO
-- Aplicar los espaciados de LiftKit
-- Aplicar animaciones de Framer Motion
+# 💼 Personal Portfolio - Ulises Valero
 
+Welcome to my portfolio! I'm Ulises Valero, a front-end developer with a solid foundation in modern technologies and continuously evolving toward back-end development. This project reflects my passion for creating attractive and functional user interfaces, as well as my commitment to lifelong learning in the web development field.
 
-PREVIO AL DISEÑO
-- Hacer los JSON en donde se guardarán los textos en castellano/inglés DONE
-- Encontrar la tipografía para la web DONE
-- Encontrar un background para el menú
+## 🚀 Technologies Used
 
+- *React*: A JavaScript library for building dynamic and efficient user interfaces.
+- *Tailwind CSS v4*: A utility-first CSS framework that enables responsive and modern design using utility classes.
+- *Framer Motion*: A library for smooth and engaging animations in React.
+- *React Router*: Handles routing in single-page applications (SPA), allowing navigation without full page reloads.
 
-HERO
-- Colocar el background DONE
-- Hacer la burguer (Menú) con su respectiva funcionalidad DONE
-- Hacer un menú de 3 iconos en el header (Bandera, Menú, Switch) DONE
-- Poner una luna y un sol para el switch de theme DONE
--PC- Poner un botón con switch con sol y luna para el light/dark theme DONE
-- Escribir el nombre de las secciones tanto en ingles como en castellano DONE
-- Colocar el link de linktree en el link de stay connected
+## 🎯 Project Features
 
-WELCOME SECTION
-- Hacer que no haya overflow entre el titulo y el mapa (Ajustar tamaño del mapa y PX del titulo) DONE
-- Lograr que el botón se centre en el div del titulo con el Width ajustado DONE
+- *Responsive Design*: Ensures an optimal experience across mobile devices, tablets, and desktops.
+- *Interactive Animations*: Enhances the user experience with transitions and visual effects.
+- *Intuitive Navigation*: Provides easy access to all portfolio sections through a clear and coherent structure.
+- *Scalability*: Establishes a solid foundation for future integrations and functionalities, including back-end development features.
 
-Contact
-- Darle una mejor forma al carousel, buscar inspiración DONE
-- Hacer que la seccion de Work with me tenga el curriculum del lado derecho del form. DONE
-- Agregar como PDF el curriculum actualizado DONE
-- Averiguar porque las fotos tienen un height determinado si no lo configuré así DONE
-- Recortar nuevamente las imagenes en el mismo tamaño e insertarlas DONE
-- Colocar como background (Secciones a elegir) el bg de WelcomeSection invertido, haciendo el fade DONE
-- Colocar el curriculum en ingles
+## 📂 Project Structure
 
-About
-- Hacer que una vez se clickee en el boton para redirigr el usuario a hobbies, pregunte si le gustó la pag y dejar un like.
+The portfolio is organized into reusable components, following best practices in React development. Main sections include:
 
-EmailJS
-- Agregar un toastify cada vez que se envia un mail
+- *Home*: Introduction and welcome.
+- *About Me*: Personal background and professional journey.
+- *Projects*: A showcase of completed work with descriptions and relevant links.
+- *Blog*: Articles and reflections on web development and technology.
+- *Contact*: A form for direct communication.
+
+## 🛠️ In Progress
+
+I'm currently exploring and learning back-end technologies to complement my front-end skills. This includes studying *Node.js*, *Express*, and databases like *MongoDB* and *PostgreSQL*, with the goal of building full-stack applications.
+
+## 📌 Repository
+
+You can explore the source code and commits of this project at the following link:
+
+🔗 [GitHub Repository](https://github.com/UlisesValero/MyPortfolio)

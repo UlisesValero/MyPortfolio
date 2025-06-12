@@ -18,7 +18,7 @@ const FoodContent = () => {
 
   return (
     <section
-      className="px-15"
+      className="px-15 select-none"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -56,7 +56,7 @@ const FoodContent = () => {
           <img
             src={currentItem.image}
             alt={currentItem.name}
-            className="w-60 lg:w-fit h-80 lg:h-100 rounded-xl shadow-lg"
+            className="w-60 lg:w-fit h-80 lg:h-100 rounded-xl shadow-lg bg-transparent "
           />
 
           <div className="absolute -bottom-15 left-45 gap-2 hidden md:flex">

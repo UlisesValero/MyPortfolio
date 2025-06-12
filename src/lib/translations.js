@@ -108,7 +108,9 @@ export const translations = {
 
         contactSection: {
             title: "Work with me",
-            buttonText: "Send"
+            buttonText: "Send",
+            successMessage: "Message sent successfully",
+            errorMessage:"An error ocurred. Please try again"
         },
 
         form: {
@@ -288,7 +290,9 @@ export const translations = {
         ],
         contactSection: {
             title: "Trabaja conmigo",
-            buttonText: "Enviar"
+            buttonText: "Enviar",
+            successMessage:"Mensaje eviado con éxito",
+            errorMessage:"Hubo un error, intenta nuevamente"
         },
         form: {
             name: "Nombre",

@@ -19,36 +19,37 @@ function App() {
         let sectionId = "hero"
         if (location.pathname === "/projects") sectionId = "projects"
         if (location.pathname === "/contact") sectionId = "contact"
-        if (location.pathname === "/contact") sectionId = "contact"
-        if (location.pathname === '/') { 
-            scroll({ top: 0})
+        if (location.pathname === '/') {
+            scroll({ top: 0 })
         }
-            const section = document.getElementById(sectionId)
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' })
-            }
-        }, [location.pathname])
+        const section = document.getElementById(sectionId)
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' })
+        }
+    }, [location.pathname])
 
     return (
-        <main className='h-full' id='app'>
-            <div id="hero" className='bg-theme theme-animation'>
-                <Hero />
-                <AnimationForPages>
-                    <Welcome isFooterVisible={isFooterVisible} />
-                </AnimationForPages>
-            </div>
+        <>
+            <Hero />
+            <main className='h-full relative z-0' id='app'>
+                <div id="hero" className='bg-theme theme-animation'>
+                    <AnimationForPages>
+                        <Welcome isFooterVisible={isFooterVisible} />
+                    </AnimationForPages>
+                </div>
 
-            <div id="projects" className='bg-bgL dark:bg-bgD theme-animation flex flex-col gap-y-60'>
-                <AnimationForPages><Projects /></AnimationForPages>
-                <AnimationForPages><Stack /></AnimationForPages>
-                <AnimationForPages><Cards /></AnimationForPages>
-            </div>
+                <div id="projects" className='bg-bgL dark:bg-bgD theme-animation flex flex-col gap-y-60'>
+                    <AnimationForPages><Projects /></AnimationForPages>
+                    <AnimationForPages><Stack /></AnimationForPages>
+                    <AnimationForPages><Cards /></AnimationForPages>
+                </div>
 
-            <div id="contact" className='flex flex-col justify-between bg-theme2 theme-animation'>
-                <AnimationForPages><Contact /></AnimationForPages>
-                <Footer setIsFooterVisible={setIsFooterVisible} />
-            </div>
-        </main>
+                <div id="contact" className='flex flex-col justify-between bg-theme2 theme-animation'>
+                    <AnimationForPages><Contact /></AnimationForPages>
+                    <Footer setIsFooterVisible={setIsFooterVisible} />
+                </div>
+            </main>
+        </>
     )
 }
 

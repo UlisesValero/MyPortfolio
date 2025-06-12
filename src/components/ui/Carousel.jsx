@@ -19,7 +19,7 @@ const Carousel = () => {
 
   return (
     <section
-      className="h-[65vh] flex justify-center items-center px-8"
+      className="h-[65vh] flex justify-center items-center px-8 select-none"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}

@@ -2,16 +2,18 @@ import Button from "./Button";
 import { useFormInput } from "../../hooks/useFormInput";
 import { translations } from "../../lib/translations";
 import { useLanguage } from "../../context/LanguageContext";
-import { useRef, useState } from "react";
+import { useState, useRef } from "react";
+import { MoonLoader } from 'react-spinners'
 import EmailJs from "../../lib/EmailJs";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 
 const FormInput = () => {
-  const { language } = useLanguage()
-  const { contactSection, formState, setFormState } = useFormInput()
-  const form = useRef()
-  const tooltipRef = useRef();
-  const [pending, setPending] = useState(false)
-  const emailClient = new EmailJs()
+  const { language } = useLanguage();
+  const { contactSection, formState, setFormState } = useFormInput();
+  const form = useRef();
+  const [pending, setPending] = useState(false);
+  const emailClient = new EmailJs();
 
   const handleChange = (e) => {
     setFormState((prev) => ({
@@ -21,39 +23,67 @@ const FormInput = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setPending(true)
+    e.preventDefault();
+    setPending(true);
 
-    await emailClient.send(formState)
+    try {
+      await emailClient.send(formState);
+      Toastify({
+        text: `✅${translations[language].contactSection.successMessage}`,
+        duration: 4000,
+        gravity: "top",
+        position: "right",
+        close: true,
+        stopOnFocus: true,
+        style: {
+          background: "#ffffff",
+          color: "#000000",
+          borderRadius: "8px",
+          fontWeight: "bold",
+        },
+      }).showToast();
 
-    console.log("Formulario enviado:", formState)
-    tooltipRef.current.style.display = "block"
-
-    setTimeout(() => {
-      tooltipRef.current.style.display = "none"
-    }, 3000);
-
-    setFormState({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-
-    setPending(false)
-  }
+      setFormState({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch {
+      Toastify({
+        text: `❌${translations[language].contactSection.errorMessage}`,
+        duration: 4000,
+        gravity: "top",
+        position: "right",
+        close: true,
+        stopOnFocus: true,
+        style: {
+          background: "#ffffff",
+          color: "#000000",
+          borderRadius: "8px",
+          fontWeight: "bold",
+        },
+      }).showToast();
+    } finally {
+      setPending(false);
+    }
+  };
 
   return (
     <section className="flex flex-col gap-8 pt-6 px-3">
+      {pending && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <MoonLoader size={40} color="#36d7b7" />
+        </div>
+      )}
       <form ref={form} onSubmit={handleSubmit}>
         {contactSection.map((input) => (
           <div key={input.id} className="relative flex space-y-6">
             {input.type === "textarea" ? (
               <textarea
-                type={input.type}
                 id={input.id}
                 name={input.name}
-                value={input.formState}
+                value={formState[input.name]}
                 placeholder=" "
                 onChange={handleChange}
                 rows={6}
@@ -66,7 +96,7 @@ const FormInput = () => {
                 type={input.type}
                 id={input.id}
                 name={input.name}
-                value={input.formState}
+                value={formState[input.name]}
                 placeholder=" "
                 onChange={handleChange}
                 required
@@ -76,28 +106,22 @@ const FormInput = () => {
             )}
             <label
               htmlFor={input.htmlFor}
-              className="pointer-events-none absolute left-3 top-2 text-white text-sm theme-animation  
-                         peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray theme-animation
+              className="pointer-events-none absolute left-3 top-2 text-white text-sm
+                         peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray transition-all duration-200
                          peer-focus:top-0 peer-focus:text-sm dark:peer-focus:text-salmon peer-focus:text-green-400 focus:border-green-400"
             >
               {input.label}
             </label>
           </div>
         ))}
-        <div className="flex justify-center w-full pt-10 ">
+        <div className="flex justify-center w-full pt-10">
           <Button
-            className={"w-[80%] text-green-200 hover:text-green-400 dark:text-white dark:hover:text-black theme-animation"}
-            text={translations[language].contactSection.buttonText}
+            className="w-[80%] text-green-200 hover:text-green-400 dark:text-white dark:hover:text-black theme-animation"
+            text={pending ? <MoonLoader size={16} color="#fff" /> : translations[language].contactSection.buttonText}
             disabled={pending}
           />
         </div>
       </form>
-      <div
-        ref={tooltipRef}
-        className="hidden text-center text-green-500 font-bold pt-4"
-      >
-        ¡Mensaje enviado!
-      </div>
     </section>
   );
 };

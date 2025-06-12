@@ -2,7 +2,6 @@ import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { usePanel } from '../../context/PanelContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { translations } from '../../lib/translations';
-import Button from './Button';
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
@@ -13,12 +12,12 @@ const DeployedPanel = () => {
 
     return (
         <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.2, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="w-70 h-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-50 
-                    bg-lgray/80 dark:bg-ddgray text-white font-h1 text-xl rounded-r-3xl shadow-xl"
+      initial={{ scale: 0.9, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    exit={{ scale: 0.2, opacity: 0 }}
+    transition={{ duration: 0.3 }}
+    className="w-70 h-100 fixed top-1 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-[10000] 
+        bg-lgray/80 dark:bg-ddgray text-white font-h1 text-xl rounded-r-3xl shadow-xl"
         >
             <div className="flex flex-col items-center justify-center gap-5 h-full relative">
                 <button
