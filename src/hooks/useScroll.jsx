@@ -11,7 +11,7 @@ const useScroll = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    return {scrolled}
+    return {scrolled, setScrolled}
 }
 
 export default useScroll

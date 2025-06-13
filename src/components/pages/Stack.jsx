@@ -46,7 +46,7 @@ const Stack = () => {
             }
         }
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="font-h1 dark:text-white text-[3.5rem] sm:text-8xl md:text-5xl lg:text-7xl text-center text-gradient-theme pointer-events-none theme-animation"
+        className="font-h1 dark:text-white text-[3.5rem] sm:text-8xl md:text-5xl lg:text-7xl text-center text-gradient-theme pointer-events-none"
       >
         Stack
       </motion.h1>

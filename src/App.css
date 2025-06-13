@@ -37,7 +37,7 @@
 }
 
 .theme-animation {
-  @apply transition-all duration-800
+  @apply transition-all duration-300
 }
 
 

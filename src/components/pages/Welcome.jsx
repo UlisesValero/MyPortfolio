@@ -8,6 +8,7 @@ import { TbHomeHand } from "react-icons/tb";
 import { scroll } from "../../lib/utils"
 import { useNavigate, useLocation } from "react-router"
 import { motion } from 'framer-motion'
+import ScrollProgressBar from "../ui/ScrollProgressBar"
 
 
 
@@ -87,8 +88,8 @@ const Welcome = ({ isFooterVisible }) => {
                             opacity: 1,
                             y: 0,
                             position: "fixed",
-                            bottom: "0.70rem",
-                            left: "48%",
+                            bottom: "1rem",
+                            right: "2rem",
                             zIndex: 50,
                         }}
                         exit={{ opacity: 0, y: 50 }}
