@@ -33,7 +33,7 @@
 }
 
 .text-gradient-theme {
-  @apply bg-gradient-to-t from-indigo-500 to-sky-500 dark:bg-gradient-to-t dark:from-[#9F3A51] dark:to-[#563F74] bg-clip-text text-transparent;
+  @apply bg-gradient-to-t from-indigo-500 to-sky-500 dark:bg-gradient-to-t dark:from-[#9F3A51] dark:to-[#563F74] bg-clip-text text-transparent
 }
 
 .theme-animation {

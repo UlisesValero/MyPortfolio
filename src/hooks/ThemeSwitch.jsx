@@ -1,8 +1,8 @@
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "../context/ThemeContext";
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "../context/ThemeContext"
 
 const ThemeSwitch = () => {
-    const { darkMode, toggleTheme } = useTheme();
+    const { darkMode, toggleTheme } = useTheme()
 
     return (
         <div>
@@ -16,4 +16,4 @@ const ThemeSwitch = () => {
     );
 };
 
-export default ThemeSwitch;
+export default ThemeSwitch

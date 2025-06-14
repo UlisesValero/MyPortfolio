@@ -1,17 +1,17 @@
-import { useLanguage } from "../context/LanguageContext";
-import { translations } from "../lib/translations";
-import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext"
+import { translations } from "../lib/translations"
+import { useState } from "react"
 
 export const useFormInput = () => {
-  const { language } = useLanguage();
-  const formLabels = translations[language].form;
+  const { language } = useLanguage()
+  const formLabels = translations[language].form
 
   const [formState, setFormState] = useState({
     fullName: "",
     email: "",
     phone: "",
     message: "",
-  });
+  })
 
   const contactSection = [
     {
@@ -46,7 +46,7 @@ export const useFormInput = () => {
       label: formLabels.text,
       formState: formState.message
     }
-  ];
+  ]
 
-  return { contactSection, formState, setFormState };
-};
+  return { contactSection, formState, setFormState }
+}

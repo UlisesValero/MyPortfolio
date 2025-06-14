@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react"
 
 const PanelContext = createContext()
 
@@ -8,14 +8,14 @@ export const PanelProvider = ( {children} ) => {
 
     useEffect(() => {
         if (deploy) {
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden"
         } else {
-            document.body.style.overflow = "";
+            document.body.style.overflow = ""
         }
         return () => {
-            document.body.style.overflow = "";
+            document.body.style.overflow = ""
         };
-    }, [deploy]);
+    }, [deploy])
 
 
     const togglePanel = () => {

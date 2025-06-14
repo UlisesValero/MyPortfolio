@@ -1,11 +1,11 @@
-import PanelIcon from "../ui/PanelIcon";
-import ThemeSwitch from "../../hooks/ThemeSwitch";
-import LanguageSwitch from "../../hooks/LanguageSwitch";
-import HeroCategories from "../ui/HeroCategories";
-import LiveClock from "../ui/LiveClock";
-import { Link } from "react-router-dom";
-import useScroll from "../../hooks/useScroll";
-import ScrollProgressBar from "../ui/ScrollProgressBar";
+import PanelIcon from "../ui/PanelIcon"
+import ThemeSwitch from "../../hooks/ThemeSwitch"
+import LanguageSwitch from "../../hooks/LanguageSwitch"
+import HeroCategories from "../ui/HeroCategories"
+import LiveClock from "../ui/LiveClock"
+import { Link } from "react-router-dom"
+import useScroll from "../../hooks/useScroll"
+import ScrollProgressBar from "../ui/ScrollProgressBar"
 
 const Hero = () => {
   const {scrolled} = useScroll()
@@ -39,7 +39,7 @@ const Hero = () => {
   {scrolled > 300 ? null : (
     <marquee 
       behavior="alternate"
-      className="pt-1 border-t bg-lblue/30 dark:bg-black/30 text-green-300 dark:text-salmon theme-animation">
+      className="pt-1 border-t bg-lblue/30 dark:bg-black/30 text-green-300/80 dark:text-salmon theme-animation">
       <LiveClock />
     </marquee>
   )}
@@ -47,4 +47,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero

@@ -1,9 +1,9 @@
-import { FaReact, FaHtml5 } from "react-icons/fa";
-import { IoLogoJavascript, IoLogoCss3 } from "react-icons/io";
-import { SiTailwindcss } from "react-icons/si";
-import { RiFirebaseLine } from "react-icons/ri";
-import { GrMysql } from "react-icons/gr";
-import { DiBootstrap } from "react-icons/di";
+import { FaReact, FaHtml5 } from "react-icons/fa"
+import { IoLogoJavascript, IoLogoCss3 } from "react-icons/io"
+import { SiTailwindcss } from "react-icons/si"
+import { RiFirebaseLine } from "react-icons/ri"
+import { GrMysql } from "react-icons/gr"
+import { DiBootstrap } from "react-icons/di"
 
 const StackContent = () => {
     const icons = [

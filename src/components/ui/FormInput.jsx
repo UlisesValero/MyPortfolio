@@ -1,33 +1,33 @@
-import Button from "./Button";
-import { useFormInput } from "../../hooks/useFormInput";
-import { translations } from "../../lib/translations";
-import { useLanguage } from "../../context/LanguageContext";
-import { useState, useRef } from "react";
+import Button from "./Button"
+import { useFormInput } from "../../hooks/useFormInput"
+import { translations } from "../../lib/translations"
+import { useLanguage } from "../../context/LanguageContext"
+import { useState, useRef } from "react"
 import { MoonLoader } from 'react-spinners'
-import EmailJs from "../../lib/EmailJs";
-import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css";
+import EmailJs from "../../lib/EmailJs"
+import Toastify from "toastify-js"
+import "toastify-js/src/toastify.css"
 
 const FormInput = () => {
-  const { language } = useLanguage();
-  const { contactSection, formState, setFormState } = useFormInput();
-  const form = useRef();
-  const [pending, setPending] = useState(false);
-  const emailClient = new EmailJs();
+  const { language } = useLanguage()
+  const { contactSection, formState, setFormState } = useFormInput()
+  const form = useRef()
+  const [pending, setPending] = useState(false)
+  const emailClient = new EmailJs()
 
   const handleChange = (e) => {
     setFormState((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setPending(true);
+    e.preventDefault()
+    setPending(true)
 
     try {
-      await emailClient.send(formState);
+      await emailClient.send(formState)
       Toastify({
         text: `✅${translations[language].contactSection.successMessage}`,
         duration: 4000,
@@ -41,14 +41,14 @@ const FormInput = () => {
           borderRadius: "8px",
           fontWeight: "bold",
         },
-      }).showToast();
+      }).showToast()
 
       setFormState({
         fullName: "",
         email: "",
         phone: "",
         message: "",
-      });
+      })
     } catch {
       Toastify({
         text: `❌${translations[language].contactSection.errorMessage}`,
@@ -63,9 +63,9 @@ const FormInput = () => {
           borderRadius: "8px",
           fontWeight: "bold",
         },
-      }).showToast();
+      }).showToast()
     } finally {
-      setPending(false);
+      setPending(false)
     }
   };
 
@@ -126,4 +126,4 @@ const FormInput = () => {
   );
 };
 
-export default FormInput;
+export default FormInput

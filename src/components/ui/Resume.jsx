@@ -1,7 +1,7 @@
 
-import Button from "./Button";
-import { translations } from "../../lib/translations";
-import { useLanguage } from "../../context/LanguageContext";
+import Button from "./Button"
+import { translations } from "../../lib/translations"
+import { useLanguage } from "../../context/LanguageContext"
 
 const Resume = () => {
   const {language} = useLanguage()
@@ -9,7 +9,7 @@ const Resume = () => {
   return (
     <section className="flex flex-col items-center gap-3  w-full">
       <img
-        src="/assets/CvImg.PNG"
+        src={translations[language].resume.href}
         className="w-[350px] md:w-[430px] lg:w-[550px]  rounded-xl shadow-lg"
         title="CV Ulises Valero"
       />
@@ -21,7 +21,7 @@ const Resume = () => {
         <Button className={"theme-animation"} text={translations[language].resume.cv} />
       </a>
     </section>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

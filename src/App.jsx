@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { scroll } from './lib/utils'
 import Hero from './components/pages/Hero'
 import Welcome from './components/pages/Welcome'
 import Contact from './components/pages/Contact'
@@ -9,7 +10,6 @@ import Cards from './components/pages/Cards'
 import AnimationForPages from './lib/AnimationForPages'
 import Stack from './components/pages/Stack'
 import './App.css'
-import { scroll } from './lib/utils'
 
 function App() {
     const [isFooterVisible, setIsFooterVisible] = useState(false)

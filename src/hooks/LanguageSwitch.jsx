@@ -1,8 +1,8 @@
-import Flag from "react-world-flags";
-import { useLanguage } from "../context/LanguageContext";
+import Flag from "react-world-flags"
+import { useLanguage } from "../context/LanguageContext"
 
 const LanguageSwitch = () => {
-  const { language, handleSwitch } = useLanguage();
+  const { language, handleSwitch } = useLanguage()
 
   return (
     <div className="flex justify-end">
@@ -17,4 +17,4 @@ const LanguageSwitch = () => {
   );
 };
 
-export default LanguageSwitch;
+export default LanguageSwitch

@@ -1,13 +1,13 @@
-import { MdOutlineCloseFullscreen } from "react-icons/md";
-import { usePanel } from '../../context/PanelContext';
-import { useLanguage } from '../../context/LanguageContext';
-import { translations } from '../../lib/translations';
-import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
+import { MdOutlineCloseFullscreen } from "react-icons/md"
+import { usePanel } from '../../context/PanelContext'
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../lib/translations'
+import { motion } from 'framer-motion'
+import { Link } from "react-router-dom"
 
 const DeployedPanel = () => {
-    const { isAnimating, togglePanelTimed } = usePanel();
-    const { language } = useLanguage();
+    const { isAnimating, togglePanelTimed } = usePanel()
+    const { language } = useLanguage()
     const categories = translations[language]?.heroCategories
 
     return (

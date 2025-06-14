@@ -7,7 +7,7 @@ import useCarousel from '../../hooks/useCarousel'
 const FootballContent = () => {
     const { language } = useLanguage()
     const CarouselContent = translations[language].hobbies2
-         const {
+    const {
         handleTouchEnd,
         handleTouchMove,
         handleTouchStart,
@@ -18,12 +18,12 @@ const FootballContent = () => {
 
     return (
         <section
-            className="px-15 select-none"
+            className="px-15 select-none md:w-[80%] flex justify-end"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-            <div className="flex flex-col-reverse justify-end lg:flex-row pt-30">
+            <div className="flex flex-col-reverse justify-end lg:flex-row">
 
                 <div className="flex justify-center lg:justify-start relative pt-5">
                     {currentItem.image.includes("mp4") ? (
@@ -57,7 +57,7 @@ const FootballContent = () => {
                         </div>
                     </div>
                 </div>
-                                <div className="w-full lg:w-1/2 px-5 lg:px-20 pt-10 flex flex-col justify-between gap-5">
+                <div className="w-full lg:w-1/2 px-5 lg:px-20 pt-10 flex flex-col justify-between gap-5">
                     <div className="space-y-5 border-b border-gray-400 pb-5">
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
                             {currentItem.number}

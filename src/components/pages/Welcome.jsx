@@ -4,7 +4,7 @@ import useScroll from "../../hooks/useScroll"
 import Button from "../ui/Button"
 import { translations } from "../../lib/translations"
 import { useLanguage } from "../../context/LanguageContext"
-import { TbHomeHand } from "react-icons/tb";
+import { TbHomeHand } from "react-icons/tb"
 import { scroll } from "../../lib/utils"
 import { useNavigate, useLocation } from "react-router"
 import { motion } from 'framer-motion'
@@ -13,7 +13,7 @@ import ScrollProgressBar from "../ui/ScrollProgressBar"
 
 
 const Welcome = ({ isFooterVisible }) => {
-    const { language } = useLanguage();
+    const { language } = useLanguage()
     const location = useLocation()
     const navigate = useNavigate()
     const handleClick = () => {

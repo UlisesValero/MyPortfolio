@@ -1,24 +1,23 @@
 import { translations } from '../../lib/translations'
 import { useLanguage } from '../../context/LanguageContext'
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi"
-import { BsArrowUpRight } from "react-icons/bs"
 import useCarousel from '../../hooks/useCarousel'
 
 const FoodContent = () => {
   const { language } = useLanguage()
   const CarouselContent = translations[language].hobbies
-     const {
-        handleTouchEnd,
-        handleTouchMove,
-        handleTouchStart,
-        nextSlide,
-        prevSlide,
-        currentItem
-    } = useCarousel(CarouselContent)
+  const {
+    handleTouchEnd,
+    handleTouchMove,
+    handleTouchStart,
+    nextSlide,
+    prevSlide,
+    currentItem
+  } = useCarousel(CarouselContent)
 
   return (
     <section
-      className="px-15 select-none"
+      className="px-15 select-none md:w-[80%] flex justify-end"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -40,15 +39,6 @@ const FoodContent = () => {
               {currentItem.foodDesc}
             </p>
           </div>
-
-          <a
-            href={currentItem.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center bg-green-400 dark:bg-salmon w-fit p-2 rounded-full hover:bg-green-300 transition"
-          >
-            <BsArrowUpRight className="text-black text-xl" />
-          </a>
 
         </div>
 

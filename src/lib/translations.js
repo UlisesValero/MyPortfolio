@@ -110,7 +110,7 @@ export const translations = {
             title: "Work with me",
             buttonText: "Send",
             successMessage: "Message sent successfully",
-            errorMessage:"An error ocurred. Please try again"
+            errorMessage: "An error ocurred. Please try again"
         },
 
         form: {
@@ -120,6 +120,7 @@ export const translations = {
             text: "Message"
         },
         blog: {
+            button: "Continue",
             title: "Beyond the code",
             text: "In addition to my passion for web development, I have other hobbies that I enjoy and that are a big part of who I am. Like any true geek, video games play an important role in my daily life — both as a form of entertainment and a source of creative inspiration. I also enjoy playing football: I'm always ready for a match, and I'm actually pretty good at it. But if there's something that truly relaxes and entertains me, it's cooking. Even though I don’t have a formal degree, many would say I cook better than some professionals. In this section, you'll get a glimpse of my life beyond code, as I share the things I’m passionate about in my free time."
         },
@@ -132,7 +133,13 @@ export const translations = {
         },
         resume: {
             cv: "Download Resume",
-            link: "/assets/UlisesValero-CV.pdf"
+            link: "/assets/UlisesValero-CV.pdf",
+            href: "/assets/englishCv.PNG"
+        },
+        hobbiesTitles:
+        {
+            title: "Signature dishes",
+            title2: "The beatiful game"
         },
         hobbies: [
             {
@@ -170,28 +177,35 @@ export const translations = {
                 number: "01",
                 briefDescription: "Peruvians vs Villurca",
                 footballDesc: "The match ended 3-3 with a last-minute goal. Great picture",
-                id: "1"
+                id: "1",
+                link: "https://www.youtube.com/watch?v=sUqiguYH9Yk&ab_channel=LigaNu%C3%B1ezCanalOficial"
             },
             {
                 image: "/assets/futbol2.mp4",
                 number: "02",
-                briefDescription: "Peruvians vs Entre Rios",
+                briefDescription: "Peruvians vs DerVorghomia",
                 footballDesc: "The match ended 2-1 with my team on the winning side, and i'll never forget this assist.",
-                id: "2"
+                id: "2",
+                link: "https://www.youtube.com/watch?v=0FQLsAJaOHY&ab_channel=LigaNu%C3%B1ezCanalOficial"
+
             },
             {
                 image: "/assets/futbol3.mp4",
                 number: "03",
-                briefDescription: "Peruvians vs Vodkanguros",
+                briefDescription: "Peruvians vs Vodcabezas",
                 footballDesc: "The match ended 1-1 with this brilliant play that unfortunately didn’t result in a goal",
-                id: "3"
+                id: "3",
+                link: "https://www.youtube.com/watch?v=gwpyD7iUcQk&ab_channel=LigaNu%C3%B1ezCanalOficial"
+
             },
             {
                 image: "/assets/futbol4.mp4",
                 number: "04",
                 briefDescription: "Peruvians vs Real Barril",
                 footballDesc: "The match ended 2-1 in our favor, featuring a solo run and an incredible save by the opposing goalkeeper",
-                id: "4"
+                id: "4",
+                link: "https://www.youtube.com/watch?v=8wj36WgggdI&t=2301s&ab_channel=LigaNu%C3%B1ezCanalOficial"
+
             }
         ]
     },
@@ -291,8 +305,8 @@ export const translations = {
         contactSection: {
             title: "Trabaja conmigo",
             buttonText: "Enviar",
-            successMessage:"Mensaje eviado con éxito",
-            errorMessage:"Hubo un error, intenta nuevamente"
+            successMessage: "Mensaje eviado con éxito",
+            errorMessage: "Hubo un error, intenta nuevamente"
         },
         form: {
             name: "Nombre",
@@ -301,6 +315,7 @@ export const translations = {
             text: "Mensaje"
         },
         blog: {
+            button: "Continuar",
             title: "Detrás del código",
             text: "Además de mi pasión por el desarrollo web, tengo otros hobbies que disfruto y que forman parte de quién soy. Como buen friki, los videojuegos ocupan un lugar importante en mi día a día, tanto como forma de entretenimiento como fuente de inspiración creativa. También disfruto de jugar al fútbol: siempre estoy listo para un picadito y no se me da para nada mal. Pero si hay algo que realmente me relaja y me divierte es cocinar. Aunque no tengo un título que lo avale, muchos podrían decir que cocino mejor que algunos profesionales. En esta sección vas a encontrar una forma de mostrarte mi vida más allá del código, compartiendo lo que me apasiona en mi tiempo libre."
         },
@@ -313,7 +328,13 @@ export const translations = {
         },
         resume: {
             cv: "Descargar Curriculum",
-            link: "/assets/Curriculum.pdf"
+            link: "/assets/Curriculum.pdf",
+            href: "/assets/CvImg.PNG"
+        },
+        hobbiesTitles:
+        {
+            title: "Mis obras",
+            title2: "Apartado futbol"
         },
         hobbies: [
             {
@@ -343,7 +364,7 @@ export const translations = {
                 briefDescription: "Pizza a la parilla",
                 foodDesc: "Pizza de un metro cocinada a la parrilla, dividida en dos sabores: una mitad con morrón, jamón y queso; y la otra con tomate, queso y huevo. Una propuesta original con el sello del fuego.",
                 id: "4"
-            }
+            },
         ],
         hobbies2: [
             {
@@ -351,51 +372,33 @@ export const translations = {
                 number: "01",
                 briefDescription: "Peruvians vs Villurca",
                 footballDesc: "Partido finalizó 3-3 con gol a último minuto",
-                id: "1"
+                id: "1",
+                link: "https://www.youtube.com/watch?v=sUqiguYH9Yk&ab_channel=LigaNu%C3%B1ezCanalOficial"
             },
             {
                 image: "/assets/futbol2.mp4",
                 number: "02",
-                briefDescription: "Peruvians vs Entre Rios",
+                briefDescription: "Peruvians vs DerVorghomia",
                 footballDesc: "Partido finalizó 2-1 con mi equipo como ganador, nunca me voy a olvidar esta asistencia",
-                id: "2"
+                id: "2",
+                link: "https://www.youtube.com/watch?v=0FQLsAJaOHY&ab_channel=LigaNu%C3%B1ezCanalOficial"
             },
             {
                 image: "/assets/futbol3.mp4",
                 number: "03",
-                briefDescription: "Peruvians vs Vodkanguros",
+                briefDescription: "Peruvians vs Vodcabezas",
                 footballDesc: "Partido finalizó 1-1 con esta magnifica jugada que no pudo terminar en gol",
-                id: "3"
+                id: "3",
+                link: "https://www.youtube.com/watch?v=gwpyD7iUcQk&ab_channel=LigaNu%C3%B1ezCanalOficial"
             },
             {
                 image: "/assets/futbol4.mp4",
                 number: "04",
                 briefDescription: "Peruvians vs Real Barril",
                 footballDesc: "Partido finalizó 2-1 a nuestro favor, jugada individual con atajadon del arquero rival",
-                id: "4"
+                id: "4",
+                link: "https://www.youtube.com/watch?v=8wj36WgggdI&t=2301s&ab_channel=LigaNu%C3%B1ezCanalOficial"
             }
         ]
     }
 }
-
-
-
-
-/* seccion hobbies
-ESPAÑOL ESPAÑA
-Además de mi pasión por el desarrollo web, tengo otros hobbies que disfruto y que forman parte de quién soy. 
-Como buen friki, los videojuegos ocupan un lugar importante en mi día a día, tanto como forma de entretenimiento como 
-fuente de inspiración creativa. También disfruto de jugar al fútbol: siempre estoy listo para un picadito y no se me da para nada mal.
-Pero si hay algo que realmente me relaja y me divierte es cocinar. 
-Aunque no tengo un título que lo avale, muchos podrían decir que cocino mejor que algunos profesionales. 
-En esta sección vas a encontrar una forma de mostrarte mi vida más allá del código, compartiendo lo que me apasiona en mi tiempo libre.
-
-INGLES
-
-In addition to my passion for web development, I have other hobbies that I enjoy and that are a big part of who I am.
-Like any true geek, video games play an important role in my daily life — both as a form of entertainment and a source of creative inspiration.
-I also enjoy playing football: I'm always ready for a match, and I'm actually pretty good at it.
-But if there's something that truly relaxes and entertains me, it's cooking.
-Even though I don’t have a formal degree, many would say I cook better than some professionals.
-In this section, you'll get a glimpse of my life beyond code, as I share the things I’m passionate about in my free time.
-*/

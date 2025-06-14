@@ -1,10 +1,10 @@
-import StackContent from '../ui/StackContent';
+import StackContent from '../ui/StackContent'
 import { motion } from 'framer-motion'
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react"
 
 const Stack = () => {
-  const [inView, setInView] = useState(false);
-  const stackRef = useRef(null);
+  const [inView, setInView] = useState(false)
+  const stackRef = useRef(null)
   const [icons, stackNames] = StackContent()
 
   useEffect(() => {
@@ -13,9 +13,9 @@ const Stack = () => {
       { threshold: [0.15] }
     );
 
-    if (stackRef.current) observer.observe(stackRef.current);
+    if (stackRef.current) observer.observe(stackRef.current)
     return () => {
-      if (stackRef.current) observer.unobserve(stackRef.current);
+      if (stackRef.current) observer.unobserve(stackRef.current)
     };
   }, []);
 
@@ -60,12 +60,12 @@ const Stack = () => {
             key={index}
             whileHover={{ rotateY: -6, rotateX: 6 }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="theme-animation flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
+            className=" flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
           >
             <motion.div className="brightness-120 hover:cursor-crosshair lg:text-5xl" whileHover={{ scale: 1.5, rotateX: -3 }}>
               {icon}
             </motion.div>
-            <h1 className="text-gray-300 text-xl lg:text-3xl pointer-events-none">{stackNames[index]}</h1>
+            <h1 className="font-semibold text-gray-300 text-xl lg:text-3xl pointer-events-none">{stackNames[index]}</h1>
           </motion.div>
         ))}
       </div>
@@ -73,4 +73,4 @@ const Stack = () => {
   );
 };
 
-export default Stack;
+export default Stack
