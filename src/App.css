@@ -25,7 +25,7 @@
 }
 
 .bg-theme2 {
-  @apply bg-[url('/assets/LightBackground.svg')] dark:bg-[url('/assets/DarkBackground.svg')] h-[1950px] bg-center md:bg-cover transition-all duration-300
+  @apply bg-[url('/assets/LightBackground.svg')] dark:bg-[url('/assets/DarkBackground.svg')] h-[2300px] bg-center md:bg-cover transition-all duration-300
 }
 
 .bg-theme3 {

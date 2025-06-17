@@ -23,14 +23,14 @@ const FootballContent = () => {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-            <div className="flex flex-col-reverse justify-end lg:flex-row">
+            <div className="flex flex-col-reverse justify-end md:flex-row">
 
-                <div className="flex justify-center lg:justify-start relative pt-5">
+                <div className="flex justify-center md:justify-start relative pb-10 md:pb-0 pt-5">
                     {currentItem.image.includes("mp4") ? (
                         <video
                             src={currentItem.image}
                             controls
-                            className="h-100 lg:h-100 rounded-xl shadow-lg bg-transparent"
+                            className="h-70 lg:h-100 rounded-xl shadow-lg bg-transparent"
                         />
                     ) : (
                         <img

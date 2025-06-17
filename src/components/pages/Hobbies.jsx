@@ -9,18 +9,16 @@ const Hobbies = () => {
     const { language } = useLanguage()
 
     return (
-        <section className="bg-theme2 pt-40 flex flex-col justify-between"> 
+        <section className="bg-theme2 pt-30 md:pt-40 flex flex-col justify-between"> 
         <Hero />
-        <div className="">
             <div className="">
-                <h1 className=" flex items-center justify-center font-h1 text-5xl text-gradient-theme pb-20 dark:brightness-150">{translations[language].hobbiesTitles.title}</h1>
+                <h1 className=" flex items-center justify-center font-h1 text-5xl text-gradient-theme md:pb-20 dark:brightness-150">{translations[language].hobbiesTitles.title}</h1>
             <FoodContent />
             </div>
             <div className="pt-40">
-            <h1 className="flex items-center justify-center font-h1 text-5xl text-gradient-theme pb-20 dark:brightness-150">{translations[language].hobbiesTitles.title2}</h1>
+            <h1 className="flex items-center justify-center font-h1 text-5xl text-gradient-theme md:pb-20 dark:brightness-150">{translations[language].hobbiesTitles.title2}</h1>
             <FootballContent />
             </div>
-        </div>
         <Footer/>
 </section>
     )
