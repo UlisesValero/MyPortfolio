@@ -23,7 +23,7 @@ The portfolio is organized into reusable components, following best practices in
 - *Home*: Introduction and welcome.
 - *About Me*: Personal background and professional journey.
 - *Projects*: A showcase of completed work with descriptions and relevant links.
-- *Blog*: Articles and reflections on web development and technology.
+- *Blog*: Section where i show my hobbies
 - *Contact*: A form for direct communication.
 
 ## 🛠️ In Progress
