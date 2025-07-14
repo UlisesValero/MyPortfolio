@@ -1,76 +1,83 @@
-import StackContent from '../ui/StackContent'
-import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from "react"
+import { motion } from "framer-motion"
+import StackContent from "../ui/StackContent"
 
 const Stack = () => {
   const [inView, setInView] = useState(false)
   const stackRef = useRef(null)
   const [icons, stackNames] = StackContent()
+  const containerRef = useRef(null)
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.intersectionRatio >= 0.15),
-      { threshold: [0.15] }
+      ([entry]) => setInView(entry.isIntersecting && entry.intersectionRatio >= 0.15),
+      { threshold: 0.15 }
     );
 
-    if (stackRef.current) observer.observe(stackRef.current)
+    if (stackRef.current) observer.observe(stackRef.current);
     return () => {
-      if (stackRef.current) observer.unobserve(stackRef.current)
+      if (stackRef.current) observer.unobserve(stackRef.current);
     };
-  }, []);
+  }, [])
 
-
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = containerRef.current.scrollWidth;
+    }
+  }, [])
 
   return (
-    <div className="relative w-full flex justify-center items-center">
+    <section className="relative w-full max-w-5xl mx-auto px-6 flex flex-col items-center">
       <motion.h1
-        initial={false}
-        animate={inView
-          ? {
-              position: "absolute",
-              top: "60%",
-              left: "50%",
-              x: "-50%",
-              y: "-50%",
-              scale: 3,
-              zIndex: 0,
-            }
-          : {
-              position: "relative",
-              top: 0,
-              left: 0,
-              x: 0,
-              y: 0,
-              scale: 1,
-              zIndex: 10,
-            }
+        initial={{ scale: 1, opacity: 1, y: 0 }}
+        animate={
+          inView
+            ? { scale: 3, opacity: 1, y: -60, transition: { duration: 0.7, ease: "easeInOut" } }
+            : { scale: 1, opacity: 0.1, y: 0, transition: { duration: 0.7, ease: "easeInOut" } }
         }
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-        className="font-h1 dark:text-white text-[3.5rem] sm:text-8xl md:text-5xl lg:text-7xl text-center text-gradient-theme pointer-events-none"
+        className="absolute pointer-events-none select-none font-bold text-gradient-theme font-h1 text-[3rem] md:text-5xl"
       >
         Stack
       </motion.h1>
 
       <div
         ref={stackRef}
-        className="relative z-10 text-5xl md:text-3xl flex flex-col flex-wrap gap-y-5 w-[90%] md:w-[75%] lg:w-[20%] pt-25"
+        className="relative z-10 pt-20 flex flex-wrap justify-center gap-4 max-w-3xl w-full "
       >
         {icons.map((icon, index) => (
           <motion.div
             key={index}
-            whileHover={{ rotateY: -6, rotateX: 6 }}
-            transition={{ type: "spring", stiffness: 100 }}
-            className=" flex items-center lg:justify-center gap-4 dark:border-salmon border-lgray border dark:shadow-salmon shadow-lgray bg-lgray/80 dark:bg-ddgray/50 p-2 rounded-md shadow-sm w-full md:w-auto"
+            whileHover={{
+              scale: 1.1,
+              rotateX: 10,
+              rotateY: -8,
+              boxShadow: "0 7px 15px rgb(170, 170, 170)",
+              transition: { type: "spring", stiffness: 150 },
+            }}
+            className="w-28 h-35 flex flex-col items-center justify-evenly bg-lgray/60 dark:bg-gray-900/70 rounded-lg p-4 shadow-md dark:shadow-lg cursor-pointer select-none dark:border-salmon border-lgray border "
           >
-            <motion.div className="brightness-120 hover:cursor-crosshair lg:text-5xl" whileHover={{ scale: 1.5, rotateX: -3 }}>
+            <motion.div className="text-5xl dark:text-salmon text-salmon brightness-110">
               {icon}
             </motion.div>
-            <h1 className="font-semibold text-gray-300 text-xl lg:text-3xl pointer-events-none">{stackNames[index]}</h1>
+            <h2 className="text-white dark:text-gray-300 font-semibold text-md text-center">
+              {stackNames[index]}
+            </h2>
           </motion.div>
         ))}
       </div>
+          <div ref={containerRef} className="w-full overflow-x-auto pt-15">
+      <div className="flex flex-col gap-10 items-center w-full mx-auto rounded-lg shadow-lg">
+        <img
+          src="https://ghchart.rshah.org/UlisesValero"
+          alt="GitHub Contribution Chart"
+          className="min-w-3xl md:w-300 p-4  dark:bg-transparent rounded-md shadow-lg pointer-events-none select-none"
+        />
+      </div>
     </div>
-  );
-};
+    </section>
+  )
+}
 
 export default Stack
+
