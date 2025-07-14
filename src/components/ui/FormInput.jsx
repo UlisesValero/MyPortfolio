@@ -78,7 +78,7 @@ const FormInput = () => {
       )}
       <form ref={form} onSubmit={handleSubmit}>
         {contactSection.map((input) => (
-          <div key={input.id} className="relative flex space-y-6">
+          <div key={input.id} className="relative flex justify-center space-y-6">
             {input.type === "textarea" ? (
               <textarea
                 id={input.id}
@@ -88,7 +88,7 @@ const FormInput = () => {
                 onChange={handleChange}
                 rows={6}
                 required
-                className="peer w-full border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm theme-animation
+                className="peer w-full md:w-[80%] border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm theme-animation
                            rounded pt-6 pb-2 px-3 focus:outline-none border-green-200 dark:border-white dark:focus:border-salmon"
               />
             ) : (
@@ -100,13 +100,13 @@ const FormInput = () => {
                 placeholder=" "
                 onChange={handleChange}
                 required
-                className="peer w-full border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm theme-animation 
+                className="peer w-full md:w-[80%] border border-dgray bg-lgray/90 dark:bg-ddgray text-white font-bold text-sm theme-animation 
                            rounded pt-7 pb-2 px-3 focus:outline-none border-green-200 dark:border-white dark:focus:border-salmon focus:border-green-400"
               />
             )}
             <label
               htmlFor={input.htmlFor}
-              className="pointer-events-none absolute left-3 top-2 text-white text-sm
+              className="pointer-events-none absolute left-2 sm:left-3 md:left-21 lg:left-17 top-2 text-white text-sm px-1 lg:px-3
                          peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray transition-all duration-200
                          peer-focus:top-0 peer-focus:text-sm dark:peer-focus:text-salmon peer-focus:text-green-400 focus:border-green-400"
             >
@@ -114,9 +114,9 @@ const FormInput = () => {
             </label>
           </div>
         ))}
-        <div className="flex justify-center w-full pt-10">
+        <div className="flex justify-center w-full pt-6">
           <Button
-            className="w-[80%] text-green-200 hover:text-green-400 dark:text-white dark:hover:text-black theme-animation"
+            className="w-[70%] md:w-[30%] text-green-200 hover:text-green-400 dark:text-white dark:hover:text-black theme-animation"
             text={pending ? <MoonLoader size={16} color="#fff" /> : translations[language].contactSection.buttonText}
             disabled={pending}
           />

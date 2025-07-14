@@ -8,7 +8,7 @@ import { TbHomeHand } from "react-icons/tb"
 import { scroll } from "../../lib/utils"
 import { useNavigate, useLocation } from "react-router"
 import { motion } from 'framer-motion'
-import ScrollProgressBar from "../ui/ScrollProgressBar"
+
 
 
 
@@ -23,42 +23,36 @@ const Welcome = ({ isFooterVisible }) => {
             navigate('/')
         }
     }
-    const {scrolled} = useScroll()
+    const { scrolled } = useScroll()
 
 
 
     return (
         <>
             <section className="flex flex-col xmd:flex-row px-3 lg:px-25 text-white theme-animation pt-15 select-none">
-                <div onClick={() => scroll("contact")} className="absolute top-27 right-1 md:hidden px-3 text-xs sm:text-md">
-                    <Button className={"theme-animation"} text={translations[language].welcomeSection.contactButton} />
-                </div>
 
                 <div className="xmd:w-[65%] xmd:px-30 sm:px-15 pt-30 xmd:flex xmd:flex-col xmd:justify-evenly">
-                    <div className="flex flex-col">
-                        <h1 className="font-h1 text-7xl md:text-10xl text-gradient-theme theme-animation ">
+                    <div className="flex flex-col ">
+                        <h1 className="font-h1 text-7xl md:text-[9rem] text-gradient-theme theme-animation ">
                             {translations[language].welcomeSection.welcome1}
                         </h1>
 
-                        <div className="flex flex-row items-center gap-4 text-gradient-theme ">
-                            <h1 className="text-7xl md:text-10xl font-h1 theme-animation">
+                        <div className="flex flex-row items-center gap-4 text-gradient-theme pb-4">
+                            <h1 className="text-7xl md:text-[7rem] font-h1 theme-animation">
                                 {translations[language].welcomeSection.welcome2}
                             </h1>
                             <div className="flex items-center">
                                 <div
-                                    className="w-20 h-25 bg-cover opacity-70 mr-0.5 theme-animation bg-[url(/assets/uLogoTitle.png)] dark:bg-[url(/assets/uLogoTitleDark.png)]">
+                                    className="w-18 h-23 md:w-22 md:h-28 bg-cover opacity-70 mr-0.5 theme-animation bg-[url(/assets/uLogoTitle.png)] dark:bg-[url(/assets/uLogoTitleDark.png)]">
 
                                 </div>
-                                <h1 className="text-7xl md:text-10xl font-h1 theme-animation">lises</h1>
+                                <h1 className="text-7xl md:text-[7rem] font-h1 theme-animation">lises</h1>
                             </div>
                         </div>
-                        <div className="flex items-center py-4">
+                        <div className="flex items-center ">
                             <h3 className="typewriter font-h3 text-white dark:text-gray-300 md:text-xl font-semibold theme-animation" >
                                 {translations[language].welcomeSection.welcome3}
                             </h3>
-                        </div>
-                        <div onClick={() => scroll("contact")} className="hidden md:flex w-[30%]">
-                            <Button className={"theme-animation"} text={translations[language].welcomeSection.contactButton} />
                         </div>
                     </div>
                     <motion.div

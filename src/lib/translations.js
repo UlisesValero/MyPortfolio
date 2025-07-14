@@ -1,6 +1,3 @@
-import ContactSection from "../components/pages/Contact";
-import Footer from "../components/pages/Footer";
-
 export const translations = {
     en: {
         heroCategories: [
@@ -12,7 +9,7 @@ export const translations = {
         welcomeSection: {
             clockInfo1: "Currently",
             clockInfo2: " in Argentina",
-            contactButton: "Contact me✍🏻",
+            contactButton: "Bring your next idea to life",
             welcome1: "Hi,",
             welcome2: "I'm",
             welcome3: "Front-end developer"
@@ -83,6 +80,10 @@ export const translations = {
 
         ],
 
+        stack: {
+              title: "Contribuciones & Stack"  
+            },
+
         cards: [
             {
                 title: "Websites",
@@ -119,11 +120,13 @@ export const translations = {
             phone: "Phone",
             text: "Message"
         },
+        
         blog: {
             button: "Continue",
             title: "Beyond the code",
             text: "In addition to my passion for web development, I have other hobbies that I enjoy and that are a big part of who I am. Like any true geek, video games play an important role in my daily life — both as a form of entertainment and a source of creative inspiration. I also enjoy playing football: I'm always ready for a match, and I'm actually pretty good at it. But if there's something that truly relaxes and entertains me, it's cooking. Even though I don’t have a formal degree, many would say I cook better than some professionals. In this section, you'll get a glimpse of my life beyond code, as I share the things I’m passionate about in my free time."
         },
+        
         footer: {
             portfolio: "My Portfolio",
             subTitle: "Building my future, one line of code at a time",
@@ -131,16 +134,19 @@ export const translations = {
             rightsText: "All rights reserved.",
             stayConnected: "Contact me"
         },
+       
         resume: {
-            cv: "Download Resume",
             link: "/assets/UlisesValero-CV.pdf",
-            href: "/assets/englishCv.PNG"
+            href: "/assets/englishCv.PNG",
+            name: "Ulises Valero CV"
         },
+       
         hobbiesTitles:
         {
             title: "Signature dishes",
             title2: "The beatiful game"
         },
+        
         hobbies: [
             {
                 image: "/assets/picada.jpeg",
@@ -171,6 +177,7 @@ export const translations = {
                 id: "4"
             }
         ],
+        
         hobbies2: [
             {
                 image: "/assets/futbol1.jpeg",
@@ -209,6 +216,7 @@ export const translations = {
             }
         ]
     },
+    
     es: {
         heroCategories: [
             { target: "project", category: "Mis proyectos" },
@@ -217,22 +225,26 @@ export const translations = {
             { target: "https://linktr.ee/Ulisesvalero", category: "Donde encontrarme" }
 
         ],
+     
         welcomeSection: {
             clockInfo1: "Actualmente",
             clockInfo2: "hs  en Argentina",
-            contactButton: "Contactame✍🏻",
+            contactButton: "Iniciá tu próxima idea",
             welcome1: "Hola,",
             welcome2: "Soy",
             welcome3: "Desarrollador front-end"
         },
+     
         deployedPanel: {
             workWithMe: "Trabaja conmigo",
             blog: "Blog",
             stayConnected: "Donde encontrarme"
         },
+     
         projectTitle: {
             projectTitle: "Mis proyectos"
         },
+       
         experience: [
 
             {
@@ -280,6 +292,11 @@ export const translations = {
                 link: "https://cv-main-r6hxmmpyb-ulises-valeros-projects.vercel.app/"
             }
         ],
+
+        stack: {
+              title: "Contribuciones & Stack"  
+            },
+        
         cards: [
             {
                 title: "Sitios web",
@@ -302,23 +319,27 @@ export const translations = {
                 icon: "UserPen"
             }
         ],
+       
         contactSection: {
             title: "Trabaja conmigo",
             buttonText: "Enviar",
             successMessage: "Mensaje eviado con éxito",
             errorMessage: "Hubo un error, intenta nuevamente"
         },
+       
         form: {
             name: "Nombre",
             email: "Correo electrónico",
             phone: "Teléfono",
             text: "Mensaje"
         },
+      
         blog: {
             button: "Continuar",
             title: "Detrás del código",
             text: "Además de mi pasión por el desarrollo web, tengo otros hobbies que disfruto y que forman parte de quién soy. Como buen friki, los videojuegos ocupan un lugar importante en mi día a día, tanto como forma de entretenimiento como fuente de inspiración creativa. También disfruto de jugar al fútbol: siempre estoy listo para un picadito y no se me da para nada mal. Pero si hay algo que realmente me relaja y me divierte es cocinar. Aunque no tengo un título que lo avale, muchos podrían decir que cocino mejor que algunos profesionales. En esta sección vas a encontrar una forma de mostrarte mi vida más allá del código, compartiendo lo que me apasiona en mi tiempo libre."
         },
+      
         footer: {
             portfolio: "Mi Portfolio",
             subTitle: "Escribiendo mi futuro, linea por linea",
@@ -326,16 +347,19 @@ export const translations = {
             rightsText: "Derechos reservados",
             stayConnected: "Conectemos"
         },
+     
         resume: {
-            cv: "Descargar Curriculum",
             link: "/assets/Curriculum.pdf",
-            href: "/assets/CvImg.PNG"
+            href: "/assets/CvImg.PNG",
+            name: "Curriculum Ulises Valero"
         },
+      
         hobbiesTitles:
         {
             title: "Mis obras",
             title2: "Apartado futbol"
         },
+        
         hobbies: [
             {
                 image: "/assets/picada.jpeg",
@@ -366,6 +390,7 @@ export const translations = {
                 id: "4"
             },
         ],
+      
         hobbies2: [
             {
                 image: "/assets/futbol1.jpeg",

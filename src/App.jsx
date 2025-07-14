@@ -20,11 +20,11 @@ function App() {
         if (location.pathname === "/projects") sectionId = "projects"
         if (location.pathname === "/contact") sectionId = "contact"
         if (location.pathname === '/') {
-            scroll({ top: 0 })
+            scroll()
         }
         const section = document.getElementById(sectionId)
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' })
+            scroll(sectionId)
         }
     }, [location.pathname])
 

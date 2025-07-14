@@ -1,12 +1,16 @@
 import { useRef, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import StackContent from "../ui/StackContent"
+import { translations } from "../../lib/translations"
+import { useLanguage } from "../../context/LanguageContext"
 
 const Stack = () => {
   const [inView, setInView] = useState(false)
   const stackRef = useRef(null)
   const [icons, stackNames] = StackContent()
   const containerRef = useRef(null)
+  const { language } = useLanguage()
+  const stack = translations[language].stack
 
 
   useEffect(() => {
@@ -28,7 +32,7 @@ const Stack = () => {
   }, [])
 
   return (
-    <section className="relative w-full max-w-5xl mx-auto px-6 flex flex-col items-center">
+    <section className="relative w-full max-w-6xl mx-auto px-6 flex flex-col items-center">
       <motion.h1
         initial={{ scale: 1, opacity: 1, y: 0 }}
         animate={
@@ -36,14 +40,14 @@ const Stack = () => {
             ? { scale: 3, opacity: 1, y: -60, transition: { duration: 0.7, ease: "easeInOut" } }
             : { scale: 1, opacity: 0.1, y: 0, transition: { duration: 0.7, ease: "easeInOut" } }
         }
-        className="absolute pointer-events-none select-none font-bold text-gradient-theme font-h1 text-[3rem] md:text-5xl"
+        className="absolute pointer-events-none select-none font-bold text-gradient-theme font-h1 text-sm md:text-lg lg:text-2xl "
       >
-        Stack
+        {stack.title}
       </motion.h1>
 
       <div
         ref={stackRef}
-        className="relative z-10 pt-20 flex flex-wrap justify-center gap-4 max-w-3xl w-full "
+        className="relative z-10 pt-10 flex flex-wrap justify-center gap-4 w-full "
       >
         {icons.map((icon, index) => (
           <motion.div
@@ -52,10 +56,9 @@ const Stack = () => {
               scale: 1.1,
               rotateX: 10,
               rotateY: -8,
-              boxShadow: "0 7px 15px rgb(170, 170, 170)",
               transition: { type: "spring", stiffness: 150 },
             }}
-            className="w-28 h-35 flex flex-col items-center justify-evenly bg-lgray/60 dark:bg-gray-900/70 rounded-lg p-4 shadow-md dark:shadow-lg cursor-pointer select-none dark:border-salmon border-lgray border "
+            className="w-28 h-35 flex flex-col items-center justify-evenly bg-lgray/60 dark:bg-gray-900/70 rounded-lg p-4 shadow-md dark:shadow-lg cursor-pointer select-none dark:border-salmon border-lgray border hover:shadow-lg hover:shadow-green-300 dark:hover:shadow-salmon "
           >
             <motion.div className="text-5xl dark:text-salmon text-salmon brightness-110">
               {icon}

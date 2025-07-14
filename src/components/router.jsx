@@ -11,3 +11,4 @@ export const router = createBrowserRouter([
   { path: "/hobbies", element: <Hobbies /> },
   { path: "*", element: <NotFoundPage /> }
 ])
+
