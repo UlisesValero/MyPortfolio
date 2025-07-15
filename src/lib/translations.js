@@ -81,7 +81,7 @@ export const translations = {
         ],
 
         stack: {
-              title: "Contribuciones & Stack"  
+              title: "Stack & contributions"  
             },
 
         cards: [
