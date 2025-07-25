@@ -36,48 +36,49 @@ export const translations = {
                 link: "https://bartolome-podesta.vercel.app/"
             },
             {
-                image: "/assets/CarouselKiddu.png",
+                image: "/assets/TEB.PNG",
                 number: "02",
+                briefDescription: "Landing page",
+                name: "TEB - Transport",
+                description: "TEB is a modern and corporate website for a company dedicated to passenger transport. Built to showcase services, values, and contact options with a corporative design.",
+                stack: "ReactJS, Tailwind v.04, Framer-Motion, React Router",
+                status: "Online",
+                id: 2,
+                link: "https://teb-six.vercel.app/"
+            },
+            {
+                image: "/assets/CarouselKiddu.png",
+                number: "03",
                 briefDescription: "E-Commerce",
                 name: "TheKidd-U",
                 description: "E-commerce project developed as part of the React course at CoderHouse. It represents a personal business idea focused on selling smash burgers. The site includes a shopping cart system and dynamic product filtering, integrated with Firebase for real-time data management.",
                 stack: "ReactJS, Tailwind v.04, FireBase",
                 status: "Online",
-                id: 2,
+                id: 3,
                 link: "https://react-js-coder-entrega.vercel.app/"
             },
             {
                 image: "/assets/CarouselNails.png",
-                number: "03",
+                number: "04",
                 briefDescription: "Landing page",
                 name: "Benegan Nails",
                 description: "Landing page for a beauty-focused business. The site showcases the services of a salon specializing in eyebrow design, eyelash styling, and nail art. It features a contact system to simplify appointment booking and customer communication.",
                 stack: "HTML5, CSS3 & Javascript",
                 status: "Offline",
-                id: 3,
+                id: 4,
                 link: "https://ulisesvalero.github.io/Benegan-Nails/"
             },
             {
                 image: "/assets/CarouselCv.png",
-                number: "04",
+                number: "05",
                 briefDescription: "CV",
                 name: "Resume",
                 description: "An updated version of my 2025 Curriculum Vitae, featuring detailed information about my work experience, academic background, and technical skills. Designed to present my professional profile in a clear and structured format.",
                 stack: "Astro",
                 status: "Online",
-                id: 4,
+                id: 5,
                 link: "https://cv-main-r6hxmmpyb-ulises-valeros-projects.vercel.app/"
             },
-            // {
-            //     image: "",
-            //     number: "05",
-            //     name: "TEB",
-            //     description: "Updated Curriculum Vitae",
-            //     stack: "Astro",
-            //     status: "Online",
-            //     id: 4
-            // }
-
         ],
 
         stack: {
@@ -259,36 +260,47 @@ export const translations = {
                 link: "https://bartolome-podesta.vercel.app/"
             },
             {
-                image: "/assets/CarouselKiddu.png",
+                image: "/assets/TEB.PNG",
                 number: "02",
+                briefDescription: "Landing page",
+                name: "TEB - Transportes",
+                description: "TEB es un sitio web moderno y corporativo para una empresa dedicada al transporte de pasajeros. Diseñado para exhibir sus servicios, valores y opciones de contacto con un diseño empresarial.",
+                stack: "ReactJS, Tailwind v.04, Framer-Motion, React Router",
+                status: "Online",
+                id: 2,
+                link: "https://teb-six.vercel.app/"
+            },
+            {
+                image: "/assets/CarouselKiddu.png",
+                number: "03",
                 briefDescription: "E-Commerce",
                 name: "TheKidd-U",
                 description: "E-commerce desarrollado como proyecto del curso de React en CoderHouse. Representa una propuesta de negocio personal enfocada en la venta de smash burgers. Incluye un sistema de carrito de compras y filtros dinámicos de productos, con integración a Firebase como base de datos en tiempo real.",
                 stack: "ReactJS, Tailwind v.04, FireBase",
                 status: "Activo",
-                id: 2,
+                id: 3,
                 link: "https://react-js-coder-entrega.vercel.app/"
             },
             {
                 image: "/assets/CarouselNails.png",
-                number: "03",
+                number: "04",
                 briefDescription: "Landing page",
                 name: "Benegan Nails",
                 description: "Landing page para un emprendimiento del rubro de la belleza. El sitio presenta los servicios de un salón especializado en el diseño de cejas, pestañas y uñas. Incorpora un sistema de contacto para facilitar la reserva de turnos y la atención al cliente.",
                 stack: "HTML5, CSS3 & Javascript",
                 status: "Inactivo",
-                id: 3,
+                id: 4,
                 link: "https://ulisesvalero.github.io/Benegan-Nails/"
             },
             {
                 image: "/assets/CarouselCv.png",
-                number: "04",
+                number: "05",
                 briefDescription: "CV",
                 name: "Curriculum",
                 description: "Versión actualizada de mi Currículum Vitae 2025, donde se detalla mi experiencia laboral, formación académica y habilidades técnicas. Es un recurso profesional pensado para mostrar mi perfil de manera clara y estructurada.",
                 stack: "Astro",
                 status: "Activo",
-                id: 4,
+                id: 5,
                 link: "https://cv-main-r6hxmmpyb-ulises-valeros-projects.vercel.app/"
             }
         ],

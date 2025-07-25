@@ -47,7 +47,7 @@ const Stack = () => {
 
       <div
         ref={stackRef}
-        className="relative z-10 pt-10 flex flex-wrap justify-center gap-4 w-full "
+        className="relative z-10 pt-10 flex flex-wrap justify-center gap-4 max-w-2xl "
       >
         {icons.map((icon, index) => (
           <motion.div
