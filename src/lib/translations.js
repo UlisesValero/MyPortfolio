@@ -220,7 +220,7 @@ export const translations = {
     
     es: {
         heroCategories: [
-            { target: "project", category: "Mis proyectos" },
+            { target: "projects", category: "Mis proyectos" },
             { target: "contact", category: "Trabaja conmigo" },
             { target: "hero", category: "Blog" },
             { target: "https://linktr.ee/Ulisesvalero", category: "Donde encontrarme" }
